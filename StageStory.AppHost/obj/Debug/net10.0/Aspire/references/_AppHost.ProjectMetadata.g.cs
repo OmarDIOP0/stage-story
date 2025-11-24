@@ -17,5 +17,5 @@ public class StageStory_AppHost
     /// <summary>
     /// The path to the Aspire Host project.
     /// </summary>
-    public static string ProjectPath => """C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\StageStory.AppHost""";
+    public static string ProjectPath => """C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory.AppHost""";
 }

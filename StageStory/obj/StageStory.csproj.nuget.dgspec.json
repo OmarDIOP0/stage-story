@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory\\StageStory.csproj": {}
+    "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.ServiceDefaults\\StageStory.ServiceDefaults.csproj": {
+    "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory.ServiceDefaults\\StageStory.ServiceDefaults.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.ServiceDefaults\\StageStory.ServiceDefaults.csproj",
+        "projectUniqueName": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory.ServiceDefaults\\StageStory.ServiceDefaults.csproj",
         "projectName": "StageStory.ServiceDefaults",
-        "projectPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.ServiceDefaults\\StageStory.ServiceDefaults.csproj",
+        "projectPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory.ServiceDefaults\\StageStory.ServiceDefaults.csproj",
         "packagesPath": "C:\\Users\\bmd tech\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.ServiceDefaults\\obj\\",
+        "outputPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory.ServiceDefaults\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -516,14 +516,14 @@
         }
       }
     },
-    "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory\\StageStory.csproj": {
+    "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory\\StageStory.csproj",
+        "projectUniqueName": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.csproj",
         "projectName": "StageStory",
-        "projectPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory\\StageStory.csproj",
+        "projectPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.csproj",
         "packagesPath": "C:\\Users\\bmd tech\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory\\obj\\",
+        "outputPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -544,8 +544,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.ServiceDefaults\\StageStory.ServiceDefaults.csproj": {
-                "projectPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.ServiceDefaults\\StageStory.ServiceDefaults.csproj"
+              "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory.ServiceDefaults\\StageStory.ServiceDefaults.csproj": {
+                "projectPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory.ServiceDefaults\\StageStory.ServiceDefaults.csproj"
               }
             }
           }

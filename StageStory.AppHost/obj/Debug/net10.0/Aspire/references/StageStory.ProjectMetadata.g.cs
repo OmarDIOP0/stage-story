@@ -15,5 +15,5 @@ public class StageStory : global::Aspire.Hosting.IProjectMetadata
     /// <summary>
     /// The path to the StageStory project.
     /// </summary>
-    public string ProjectPath => """C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\StageStory\StageStory.csproj""";
+    public string ProjectPath => """C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\StageStory.csproj""";
 }

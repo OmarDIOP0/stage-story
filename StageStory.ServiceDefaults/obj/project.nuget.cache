@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gCUGpf9GjkU=",
+  "dgSpecHash": "dR8mOuRAmyw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.ServiceDefaults\\StageStory.ServiceDefaults.csproj",
+  "projectFilePath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory.ServiceDefaults\\StageStory.ServiceDefaults.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.extensions.ambientmetadata.application\\9.9.0\\microsoft.extensions.ambientmetadata.application.9.9.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.extensions.compliance.abstractions\\9.9.0\\microsoft.extensions.compliance.abstractions.9.9.0.nupkg.sha512",

@@ -18,17 +18,15 @@ using System.Reflection;
     "s\\ext\\")]
 [assembly: System.Reflection.AssemblyMetadata("dcpbinpath", "C:\\Users\\bmd tech\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\9.5.0\\tool" +
     "s\\ext\\bin\\")]
-[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.AppHos" +
-    "t")]
+[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory.AppHost")]
 [assembly: System.Reflection.AssemblyMetadata("apphostprojectname", "StageStory.AppHost.csproj")]
 [assembly: System.Reflection.AssemblyMetadata("aspiredashboardpath", "C:\\Users\\bmd tech\\.nuget\\packages\\aspire.dashboard.sdk.win-x64\\9.5.0\\tools\\Aspire" +
     ".Dashboard.exe")]
-[assembly: System.Reflection.AssemblyMetadataAttribute("apphostprojectbaseintermediateoutputpath", "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.AppHos" +
-    "t\\obj\\")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("apphostprojectbaseintermediateoutputpath", "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory.AppHost\\obj\\")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("StageStory.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55cdfc83ecb22b7b46a3932183ce1dfbc29acc19")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a68e2ea98137912464aec396b96dc5e4aa01551")]
 [assembly: System.Reflection.AssemblyProductAttribute("StageStory.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StageStory.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
