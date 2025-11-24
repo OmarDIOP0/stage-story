@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="StageStory.AppHost/StageStory.AppHost.csproj" />
+  <Project Path="StageStory.ServiceDefaults/StageStory.ServiceDefaults.csproj" />
+  <Project Path="StageStory/StageStory.csproj" />
+</Solution>
