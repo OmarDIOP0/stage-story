@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -15,5 +15,16 @@
   <ItemGroup>
     <ProjectReference Include="..\StageStory.ServiceDefaults\StageStory.ServiceDefaults.csproj" />
   </ItemGroup>
+	<ItemGroup>
+		<UpToDateCheckBuilt Include="wwwroot/css/styles.css" Set="Css" />
+		<UpToDateCheckBuilt Include="tailwind.config.js" Set="Css" />
+	</ItemGroup>
+
+	<Target Name="Tailwind" BeforeTargets="Build">
+		<!-- Exécute seulement si package.json et le fichier d'entrée existent, et force le WorkingDirectory -->
+		<Exec Command="npm run css:build"
+		      WorkingDirectory="$(MSBuildProjectDirectory)"
+		      Condition="Exists('$(MSBuildProjectDirectory)package.json') And Exists('$(MSBuildProjectDirectory)wwwroot/css/site.css')" />
+	</Target>
 
 </Project>
