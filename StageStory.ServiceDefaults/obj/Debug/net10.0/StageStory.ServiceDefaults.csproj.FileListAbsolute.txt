@@ -11,3 +11,16 @@ C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\StageStory.Servi
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\StageStory.ServiceDefaults\obj\Debug\net10.0\refint\StageStory.ServiceDefaults.dll
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\StageStory.ServiceDefaults\obj\Debug\net10.0\StageStory.ServiceDefaults.pdb
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\StageStory.ServiceDefaults\obj\Debug\net10.0\ref\StageStory.ServiceDefaults.dll
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory.ServiceDefaults\bin\Debug\net10.0\StageStory.ServiceDefaults.deps.json
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory.ServiceDefaults\bin\Debug\net10.0\StageStory.ServiceDefaults.dll
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory.ServiceDefaults\bin\Debug\net10.0\StageStory.ServiceDefaults.pdb
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory.ServiceDefaults\obj\Debug\net10.0\StageStory.ServiceDefaults.csproj.AssemblyReference.cache
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory.ServiceDefaults\obj\Debug\net10.0\StageStory.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory.ServiceDefaults\obj\Debug\net10.0\StageStory.ServiceDefaults.AssemblyInfoInputs.cache
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory.ServiceDefaults\obj\Debug\net10.0\StageStory.ServiceDefaults.AssemblyInfo.cs
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory.ServiceDefaults\obj\Debug\net10.0\StageStory.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory.ServiceDefaults\obj\Debug\net10.0\StageStory.ServiceDefaults.sourcelink.json
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory.ServiceDefaults\obj\Debug\net10.0\StageStory.ServiceDefaults.dll
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory.ServiceDefaults\obj\Debug\net10.0\refint\StageStory.ServiceDefaults.dll
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory.ServiceDefaults\obj\Debug\net10.0\StageStory.ServiceDefaults.pdb
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory.ServiceDefaults\obj\Debug\net10.0\ref\StageStory.ServiceDefaults.dll
