@@ -13,5 +13,7 @@ namespace StageStory.Models
         public string Specialization { get; set; }
         public int Year { get; set; }
         public string University { get; set; }
+
+        public virtual ICollection<Notification> Notifications { get; set; }
     }
 }
