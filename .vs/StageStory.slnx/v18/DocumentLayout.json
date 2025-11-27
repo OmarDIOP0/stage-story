@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\stagestory.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\stagestory.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "libman.json",
-              "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\libman.json",
-              "RelativeDocumentMoniker": "StageStory\\libman.json",
-              "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\libman.json",
-              "RelativeToolTip": "StageStory\\libman.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-27T16:16:04.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StageStory.csproj",
-              "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.csproj",
-              "RelativeDocumentMoniker": "StageStory\\StageStory.csproj",
-              "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.csproj*",
-              "RelativeToolTip": "StageStory\\StageStory.csproj*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-25T00:24:50.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "StageStory\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "StageStory\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-25T00:10:32.262Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "StageStory\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "StageStory\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-25T00:07:01.864Z",
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "StageStory\\Models\\Student.cs",
+              "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Models\\Student.cs",
+              "RelativeToolTip": "StageStory\\Models\\Student.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T17:11:46.587Z",
               "EditorCaption": ""
             }
           ]
