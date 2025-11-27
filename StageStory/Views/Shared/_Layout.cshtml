@@ -10,15 +10,13 @@
     <link rel="stylesheet" href="~/StageStory.styles.css" asp-append-version="true" /> 
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/output.css" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap@5.3.8/bootstrap.css" />
 
 
 </head>
 <body>
     <header>
-        <h1 class="text-red-500 text-3xl">Test Tailwind</h1>
-        <div class="bg-green-500 p-10 text-white">TEST TAILWIND BACKGROUND</div>
-        <p class="text-6xl">TAILWIND TEXT XXL</p>
-        <div class="mt-20 bg-gray-200">TEST MARGIN</div>
+     
 
 
 
@@ -26,26 +24,34 @@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
-        </main>
-        <div class="container my-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card shadow-sm rounded-lg border-0">
-                        <img src="https://via.placeholder.com/600x200" class="card-img-top" alt="Image Card">
-                        <div class="card-body">
-                            <h5 class="card-title text-primary">Titre de la Card</h5>
-                            <p class="card-text text-muted">
-                                Ceci est un exemple de card avec un design moderne. Vous pouvez ajouter ici une description ou un contenu supplémentaire.
-                            </p>
-                            <a href="#" class="btn btn-primary">Action</a>
-                            <a href="#" class="btn btn-outline-secondary">Annuler</a>
+            <div class="container mt-5">
+                <h2>Test Bootstrap Modal</h2>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal">
+                    Ouvrir le modal
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="testModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="testModalLabel">Modal de Test</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                            </div>
+                            <div class="modal-body">
+                                Si tu vois ce message et le modal fonctionne, Bootstrap est bien installé !
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                <button type="button" class="btn btn-primary">Sauvegarder</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-
+        </main>
     </div>
 
     <footer class="border-top footer text-muted">
@@ -58,4 +64,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+<script src="~/js/bootstrap@5.3.8/bootstrap.js"></script>
 </html>

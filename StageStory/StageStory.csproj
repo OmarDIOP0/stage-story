@@ -19,9 +19,8 @@
 		<UpToDateCheckBuilt Include="wwwroot/css/styles.css" Set="Css" />
 		<UpToDateCheckBuilt Include="tailwind.config.js" Set="Css" />
 	</ItemGroup>
-
-	<Target Name="Tailwind" BeforeTargets="Compile">
-		<Exec Command="npx tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/output.css --watch" />
-	</Target>
+	<ItemGroup>
+	  <Folder Include="wwwroot\lib\bootstrap%405.3.8\" />
+	</ItemGroup>
 
 </Project>
