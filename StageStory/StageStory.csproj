@@ -20,11 +20,8 @@
 		<UpToDateCheckBuilt Include="tailwind.config.js" Set="Css" />
 	</ItemGroup>
 
-	<Target Name="Tailwind" BeforeTargets="Build">
-		<!-- Exécute seulement si package.json et le fichier d'entrée existent, et force le WorkingDirectory -->
-		<Exec Command="npm run css:build"
-		      WorkingDirectory="$(MSBuildProjectDirectory)"
-		      Condition="Exists('$(MSBuildProjectDirectory)package.json') And Exists('$(MSBuildProjectDirectory)wwwroot/css/site.css')" />
+	<Target Name="Tailwind" BeforeTargets="Compile">
+		<Exec Command="npx tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/output.css --watch" />
 	</Target>
 
 </Project>

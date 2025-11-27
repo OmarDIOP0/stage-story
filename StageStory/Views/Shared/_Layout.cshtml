@@ -7,48 +7,45 @@
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
-    @* <link rel="stylesheet" href="~/StageStory.styles.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="~/StageStory.styles.css" asp-append-version="true" /> 
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/output.css" asp-append-version="true" />
 
 
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">StageStory</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <h1 class="text-red-500 text-3xl">Test Tailwind</h1>
+        <div class="bg-green-500 p-10 text-white">TEST TAILWIND BACKGROUND</div>
+        <p class="text-6xl">TAILWIND TEXT XXL</p>
+        <div class="mt-20 bg-gray-200">TEST MARGIN</div>
+
+
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-        <div class="min-h-screen bg-gray-100 py-6">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-lg shadow p-6">
-                <h1 class="text-3xl font-bold text-blue-600 mb-4">Bienvenue sur StageStory</h1>
-                <p class="text-gray-600">Tailwind CSS fonctionne avec ASP.NET !</p>
-                <button class="btn-danger-400 mt-4">
-                    Bouton stylisé
-                </button>
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card shadow-sm rounded-lg border-0">
+                        <img src="https://via.placeholder.com/600x200" class="card-img-top" alt="Image Card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Titre de la Card</h5>
+                            <p class="card-text text-muted">
+                                Ceci est un exemple de card avec un design moderne. Vous pouvez ajouter ici une description ou un contenu supplémentaire.
+                            </p>
+                            <a href="#" class="btn btn-primary">Action</a>
+                            <a href="#" class="btn btn-outline-secondary">Annuler</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+
+
     </div>
 
     <footer class="border-top footer text-muted">

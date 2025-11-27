@@ -125,6 +125,8 @@ C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\StageStory\obj\D
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\StageStory\obj\Debug\net10.0\ref\StageStory.dll
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\bin\Debug\net10.0\appsettings.json
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\bin\Debug\net10.0\package-lock.json
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\bin\Debug\net10.0\package.json
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\bin\Debug\net10.0\StageStory.staticwebassets.runtime.json
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\bin\Debug\net10.0\StageStory.staticwebassets.endpoints.json
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\bin\Debug\net10.0\StageStory.exe
@@ -172,7 +174,7 @@ C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\scopedcss\bundle\StageStory.styles.css
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\scopedcss\projectbundle\StageStory.bundle.scp.css
-C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\compressed\y7r6bom625-{0}-kaxybb41cb-kaxybb41cb.gz
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\compressed\y7r6bom625-{0}-mh4zefqudq-mh4zefqudq.gz
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\compressed\0trkwwuppy-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\compressed\rt7etuqp9q-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\compressed\6u5dfw9qc4-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -248,3 +250,4 @@ C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\StageStory.pdb
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\StageStory.genruntimeconfig.cache
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\ref\StageStory.dll
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\compressed\z3p2t9j177-{0}-7dc8gp21j2-7dc8gp21j2.gz

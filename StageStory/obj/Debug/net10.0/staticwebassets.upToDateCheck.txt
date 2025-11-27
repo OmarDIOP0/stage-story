@@ -60,6 +60,8 @@ C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\boot
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\css\site.css
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\css\output.css
+wwwroot\css\output.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
