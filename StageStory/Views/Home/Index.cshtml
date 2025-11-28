@@ -40,6 +40,27 @@
         .status-badge {
             font-size: 0.8rem;
         }
+
+        .bg-slateGray {
+            background-color: #6c757d;
+        }
+
+        .text-midnight_text {
+            color: #2c3e50;
+        }
+
+        .bg-secondary {
+            background-color: #6c757d;
+        }
+
+        .shadow-input-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .smallImage {
+            width: 30px;
+            height: 30px;
+        }
     </style>
 </head>
 <body>
@@ -77,15 +98,63 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-primary text-white py-4">
-        <div class="container py-4">
+    <section id="home-section" class="bg-slateGray">
+        <div class="container mx-auto px-4 pt-5">
             <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h1 class="display-5 fw-bold mb-3">Évaluez vos expériences de stage</h1>
-                    <p class="lead mb-4">Partagez votre expérience de stage et aidez les futurs étudiants à faire les bons choix.</p>
+                <!-- Colonne de contenu texte -->
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                    <div class="d-flex flex-column gap-4">
+                        <!-- Badge promotion -->
+                        <div class="d-flex gap-2 justify-content-center justify-content-lg-start">
+                            <i class="bi bi-patch-check-fill text-success fs-5"></i>
+                            <p class="text-success fw-semibold text-center text-lg-start mb-0">Bénéficiez de 30% de réduction sur votre premier stage</p>
+                        </div>
+
+                        <!-- Titre principal -->
+                        <h1 class="text-midnight_text display-5 fw-semibold text-center text-lg-start">
+                            Faites progresser vos compétences en ingénierie avec nous.
+                        </h1>
+
+                        <!-- Sous-titre -->
+                        <h3 class="text-dark-emphasis fs-5 text-center text-lg-start">
+                            Développez vos compétences avec nos cours et bénéficiez de mentors d'entreprises de classe mondiale.
+                        </h3>
+
+                        <!-- Barre de recherche -->
+                        <div class="position-relative rounded-pill mt-3">
+                            <input type="email" name="q" class="form-control form-control-lg py-3 px-4 w-100 text-dark rounded-pill border-0 shadow-input-shadow" placeholder="Rechercher des cours..." autocomplete="off" />
+                            <button class="btn btn-secondary p-3 rounded-pill position-absolute top-50 end-0 translate-middle-y me-2">
+                                <i class="bi bi-search text-white fs-5"></i>
+                            </button>
+                        </div>
+
+                        <!-- Points forts -->
+                        <div class="row justify-content-between pt-4">
+                            <div class="col-4 text-center">
+                                <div class="d-flex flex-column align-items-center gap-1">
+                                    <i class="bi bi-check-circle-fill text-success fs-4"></i>
+                                    <p class="text-dark mb-0 small">Flexible</p>
+                                </div>
+                            </div>
+                            <div class="col-4 text-center">
+                                <div class="d-flex flex-column align-items-center gap-1">
+                                    <i class="bi bi-check-circle-fill text-success fs-4"></i>
+                                    <p class="text-dark mb-0 small">Parcours d'apprentissage</p>
+                                </div>
+                            </div>
+                            <div class="col-4 text-center">
+                                <div class="d-flex flex-column align-items-center gap-1">
+                                    <i class="bi bi-check-circle-fill text-success fs-4"></i>
+                                    <p class="text-dark mb-0 small">Communauté</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-4 text-center">
-                    <img src="https://via.placeholder.com/300x200/0d6efd/ffffff?text=Story+Stage" alt="Story Stage" class="img-fluid rounded shadow">
+
+                <!-- Colonne image -->
+                <div class="col-lg-6 col-md-12 text-center">
+                    <img src="~/images/mahila.png" alt="Étudiante" class="img-fluid rounded shadow" />
                 </div>
             </div>
         </div>
@@ -379,9 +448,6 @@
         // Gestion de la soumission du formulaire
         document.getElementById('internshipForm').addEventListener('submit', function(e) {
             e.preventDefault();
-
-            // Ici, vous ajouteriez le code pour envoyer les données au serveur
-            // Pour l'instant, on simule juste un enregistrement réussi
             alert('Stage enregistré avec succès!');
             this.reset();
 

@@ -152,6 +152,7 @@ wwwroot\css\bootstrap@5.3.8\bootstrap.rtl.min.css
 wwwroot\css\bootstrap@5.3.8\bootstrap.rtl.min.css.map
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\mahila.png
 wwwroot\js\bootstrap@5.3.8\bootstrap.bundle.js
 wwwroot\js\bootstrap@5.3.8\bootstrap.bundle.js.map
 wwwroot\js\bootstrap@5.3.8\bootstrap.bundle.min.js
