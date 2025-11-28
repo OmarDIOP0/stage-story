@@ -8,6 +8,7 @@ using StageStory.Models;
 using StageStory.Models.Dto;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -57,65 +58,40 @@ namespace StageStory.Controllers
         }
 
         [AllowAnonymous]
-        public async Task<ActionResult<AdminLoginResponse>> Authenticate(string email, string password)
+        [HttpPost]
+        public async Task<IActionResult> Login(string email, string password)
         {
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
-                return BadRequest("Identifiants manquants.");
-            var admin = new Admin();
-            try
-            {
-                admin = await _context.Admins.FirstOrDefaultAsync(u => u.Email.ToLower() == email.ToLower());
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("ERREUR EF ===> " + ex.Message);
-                return BadRequest(new { success = false, message = ex.Message });
-            }
+                return BadRequest("Email ou mot de passe manquant.");
+
+            var admin = await _context.Admins
+                .FirstOrDefaultAsync(a => a.Email.ToLower() == email.ToLower());
 
             if (admin == null)
-                return Unauthorized("Admin introuvable ou inactif.");
+                return Unauthorized("Admin introuvable.");
 
-            bool validPassword = BCrypt.Net.BCrypt.Verify(password, admin.Password);
-            if (!validPassword)
+            bool isValidPassword = BCrypt.Net.BCrypt.Verify(password, admin.Password);
+            if (!isValidPassword)
                 return Unauthorized("Mot de passe incorrect.");
 
+            // Claims pour JWT
             var claims = new[]
             {
-                new Claim(ClaimTypes.Name, userRead.Login!),
-                new Claim(ClaimTypes.NameIdentifier, userRead.Id.ToString()),
-                new Claim(ClaimTypes.Role, userRead.Profile!.ToLower()),
-                new Claim(JwtRegisteredClaimNames.GivenName,$"{userRead.Prenom} {userRead.Nom}"),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                new Claim(ClaimTypes.NameIdentifier, admin.AdminId.ToString()),
+                new Claim(ClaimTypes.Name, admin.Name),
+                new Claim(ClaimTypes.Email, admin.Email),
+                new Claim(ClaimTypes.Role, "Admin")
             };
 
-            var res = _tokenService.GenerateAccessToken(claims);
-            string accessToken = res.Item1;
-            DateTime expire = res.Item2;
+            var token = JwtHelper.GenerateToken(claims); 
 
-            var refreshToken = _tokenService.GenerateRefreshToken();
-            _ = int.TryParse(_config["Jwt:RefreshTokenValidityInDays"], out int refreshTokenValidityInDays);
-
-            var userRefreshToken = _context.RefreshTokens.FirstOrDefault(rt => rt.UserName == user.Login);
-            if (userRefreshToken == null)
+            return Ok(new
             {
-                userRefreshToken = new RefreshToken { UserName = user.Login };
-                _context.RefreshTokens.Add(userRefreshToken);
-            }
-
-            userRefreshToken.Refresh_Token = refreshToken;
-            userRefreshToken.Created = DateTime.Now;
-            userRefreshToken.Expires = DateTime.Now.AddDays(refreshTokenValidityInDays);
-
-            await _context.SaveChangesAsync();
-
-            return Ok(new UserLoginResponse
-            {
-                Token = accessToken,
-                RefreshToken = refreshToken,
-                TokenExpireAt = expire,
-                User = userRead
+                Token = token,
+                Admin = new { admin.AdminId, admin.Name, admin.Email }
             });
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
