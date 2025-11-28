@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using StageStory.Data;
+
 namespace StageStory;
 
 public class Program
@@ -6,6 +10,18 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
         builder.AddServiceDefaults();
+        builder.Services.AddDbContext<ApplicationDbContext>(options =>
+
+            options.UseSqlServer(
+                builder.Configuration.GetConnectionString("DefaultConnectionString"),
+                sqlServerOptionsAction: sqlOptions =>
+                {
+                    sqlOptions.EnableRetryOnFailure(
+                    maxRetryCount: 10,
+                    maxRetryDelay: TimeSpan.FromSeconds(15),
+                    errorNumbersToAdd: null);
+                }));
+
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
