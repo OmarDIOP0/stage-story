@@ -624,3 +624,5 @@ C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\bin\Debug\net10.
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\bin\Debug\net10.0\BCrypt.Net-Next.dll
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
