@@ -11,46 +11,13 @@
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/output.css" asp-append-version="true" />
     <link rel="stylesheet" type="text/css" href="~/css/bootstrap@5.3.8/bootstrap.css" />
-
-
 </head>
 <body>
     <header>
-     
-
-
-
     </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
-            <div class="container mt-5">
-                <h2>Test Bootstrap Modal</h2>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testModal">
-                    Ouvrir le modal
-                </button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="testModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="testModalLabel">Modal de Test</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                            </div>
-                            <div class="modal-body">
-                                Si tu vois ce message et le modal fonctionne, Bootstrap est bien installé !
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                <button type="button" class="btn btn-primary">Sauvegarder</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </main>
     </div>
 
