@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.Scripting;
 using Microsoft.EntityFrameworkCore;
 using StageStory.Data;
+using StageStory.Helper;
 using StageStory.Models;
 using StageStory.Models.Dto;
 using System;
@@ -18,10 +19,12 @@ namespace StageStory.Controllers
     public class AdminsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly JwtHelper _jwtHelper;
 
-        public AdminsController(ApplicationDbContext context)
+        public AdminsController(ApplicationDbContext context, JwtHelper jwtHelper)
         {
             _context = context;
+            _jwtHelper = jwtHelper;
         }
 
         public async Task<IActionResult> Login()
@@ -83,7 +86,7 @@ namespace StageStory.Controllers
                 new Claim(ClaimTypes.Role, "Admin")
             };
 
-            var token = JwtHelper.GenerateToken(claims); 
+            var token = _jwtHelper.GenerateToken(claims); 
 
             return Ok(new
             {

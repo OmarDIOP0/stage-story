@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using StageStory.Data;
+using StageStory.Helper;
 using System.Text;
 
 namespace StageStory;
@@ -45,6 +46,7 @@ public class Program
                 )
             };
         });
+        builder.Services.AddSingleton<JwtHelper>();
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
