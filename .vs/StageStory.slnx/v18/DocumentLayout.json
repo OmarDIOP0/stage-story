@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,6 +47,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AdminsController.cs",
+              "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\AdminsController.cs",
+              "RelativeDocumentMoniker": "StageStory\\Controllers\\AdminsController.cs",
+              "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\AdminsController.cs",
+              "RelativeToolTip": "StageStory\\Controllers\\AdminsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T19:14:52.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "StudentsController.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\StudentsController.cs",
               "RelativeDocumentMoniker": "StageStory\\Controllers\\StudentsController.cs",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "NotificationsController.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\NotificationsController.cs",
               "RelativeDocumentMoniker": "StageStory\\Controllers\\NotificationsController.cs",
@@ -68,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "InternshipsController.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\InternshipsController.cs",
               "RelativeDocumentMoniker": "StageStory\\Controllers\\InternshipsController.cs",
@@ -81,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "EnterprisesController.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\EnterprisesController.cs",
               "RelativeDocumentMoniker": "StageStory\\Controllers\\EnterprisesController.cs",
@@ -94,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "20251128190051_AddField.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Migrations\\20251128190051_AddField.cs",
               "RelativeDocumentMoniker": "StageStory\\Migrations\\20251128190051_AddField.cs",
@@ -107,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Internship.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Models\\Internship.cs",
               "RelativeDocumentMoniker": "StageStory\\Models\\Internship.cs",
@@ -120,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "StageStory\\Controllers\\HomeController.cs",
