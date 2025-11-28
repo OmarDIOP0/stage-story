@@ -102,6 +102,7 @@ namespace StageStory.Controllers
         {
             if (ModelState.IsValid)
             {
+                admin.Password = BCrypt.Net.BCrypt.HashPassword(admin.Password);
                 _context.Add(admin);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
