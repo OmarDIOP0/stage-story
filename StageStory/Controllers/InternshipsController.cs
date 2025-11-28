@@ -61,6 +61,9 @@ namespace StageStory.Controllers
         {
             if (ModelState.IsValid)
             {
+                internship.CreatedDate = DateTime.Now;
+                internship.Status = Models.Enum.StatusEnum.Pending;
+                
                 _context.Add(internship);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
