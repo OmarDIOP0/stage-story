@@ -105,15 +105,16 @@
                             <h3><i class="bi bi-plus-circle"></i>Nouveau stage</h3>
                         </div>
                         <div class="card-body p-4">
-                            <form id="internshipForm" asp-controller="Internships" asp-action="Create">
+                            <form id="internshipForm" method="post" asp-controller="Internships" asp-action="Create">
+
                                 <div class="mb-3">
-                                    <label for="name" class="form-label fw-bold">Nom du stage</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Ex: Développeur web front-end">
+                                    <label class="form-label fw-bold">Nom du stage</label>
+                                    <input asp-for="Name" type="text" class="form-control" placeholder="Ex: Développeur web front-end">
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="description" class="form-label fw-bold">Description</label>
-                                    <textarea class="form-control" id="description" rows="3" placeholder="Décrivez vos missions principales..."></textarea>
+                                    <label class="form-label fw-bold">Description</label>
+                                    <textarea asp-for="Description" class="form-control" rows="3"></textarea>
                                 </div>
 
                                 <div class="mb-3">
@@ -125,44 +126,51 @@
                                         <span class="emoji-rating" data-rating="4">😄</span>
                                         <span class="emoji-rating" data-rating="5">🤩</span>
                                     </div>
-                                    <input type="hidden" id="rating" name="rating" value="0">
-                                    <div class="text-center text-muted small" id="ratingText">Sélectionnez une note</div>
+
+                                    <!-- Doit avoir asp-for="Rating" -->
+                                    <input asp-for="Rating" type="hidden" id="rating" value="0">
+
+                                    <div class="text-center text-muted small" id="ratingText">
+                                        Sélectionnez une note
+                                    </div>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="evaluation" class="form-label fw-bold">Commentaire d'évaluation</label>
-                                    <textarea class="form-control" id="evaluation" rows="3" placeholder="Partagez votre expérience globale..."></textarea>
+                                    <label class="form-label fw-bold">Commentaire d'évaluation</label>
+                                    <textarea asp-for="Evaluation" class="form-control" rows="3"></textarea>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="salaryAmount" class="form-label fw-bold">Salaire (€)</label>
-                                    <input type="number" class="form-control" id="salaryAmount" placeholder="Montant mensuel">
+                                    <label class="form-label fw-bold">Salaire (€)</label>
+                                    <input asp-for="SalaryAmount" type="number" class="form-control" placeholder="Montant mensuel">
                                 </div>
 
                                 <div class="row mb-3">
                                     <div class="col-md-6">
-                                        <label for="startDate" class="form-label fw-bold">Date de début</label>
-                                        <input type="date" class="form-control" id="startDate">
+                                        <label class="form-label fw-bold">Date de début</label>
+                                        <input asp-for="StartDate" type="date" class="form-control">
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="endDate" class="form-label fw-bold">Date de fin</label>
-                                        <input type="date" class="form-control" id="endDate">
+                                        <label class="form-label fw-bold">Date de fin</label>
+                                        <input asp-for="EndDate" type="date" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="entreprise" class="form-label fw-bold">Entreprise</label>
-                                    <input type="text" class="form-control" id="entreprise" placeholder="Nom de l'entreprise">
+                                    <label class="form-label fw-bold">Entreprise</label>
+                                    <select asp-for="EntrepriseId" class="form-select" asp-items="ViewBag.Id"></select>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="signatureType" class="form-label fw-bold">Type de convention</label>
-                                    <select class="form-select" id="signatureType">
+                                    <label class="form-label fw-bold">Type de convention</label>
+                                    <select asp-for="SignatureType" class="form-select">
                                         <option value="1">Convention d'école</option>
                                         <option value="2">Contrat de stage</option>
                                         <option value="3">Autre</option>
                                     </select>
                                 </div>
+
+                                <input type="hidden" asp-for="StudentId" value="1" /> <!-- si tu veux tester -->
 
                                 <div class="d-grid">
                                     <button type="submit" class="btn btn-primary-modern btn-lg">
@@ -170,6 +178,7 @@
                                     </button>
                                 </div>
                             </form>
+
                         </div>
                     </div>
                 </div>
