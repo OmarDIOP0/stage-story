@@ -90,9 +90,9 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
+            <a class="navbar-brand fw-bold active" href="#">
                 <i class="bi bi-journal-bookmark-fill me-2"></i>
                 Story Stage
             </a>
@@ -106,63 +106,16 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="/">Accueil</a>
                     </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Mes Stages
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/stages/ajouter">Ajouter un stage</a></li>
-                            <li><a class="dropdown-item" href="/stages/mes-stages">Voir mes stages</a></li>
-                            <li><a class="dropdown-item" href="/stages/en-attente">Stages en attente</a></li>
-                            <li><a class="dropdown-item" href="/stages/valides">Stages validés</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Stages</a>
                     </li>
-
-                    <!-- Statistiques - avec sous-menu -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Statistiques
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/stats/mes-stats">Mes statistiques</a></li>
-                            <li><a class="dropdown-item" href="/stats/globales">Statistiques globales</a></li>
-                            <li><a class="dropdown-item" href="/stats/entreprises">Par entreprise</a></li>
-                            <li><a class="dropdown-item" href="/stats/secteurs">Par secteur</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Mon Profil - avec sous-menu -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Mon Profil
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/profil/infos">Informations personnelles</a></li>
-                            <li><a class="dropdown-item" href="/profil/parametres">Paramètres</a></li>
-                            <li><a class="dropdown-item" href="/profil/notifications">Notifications</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/profil/aide">Aide & Support</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Entreprises - avec sous-menu -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Entreprises
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/entreprises/rechercher">Rechercher une entreprise</a></li>
-                            <li><a class="dropdown-item" href="/entreprises/top">Entreprises les mieux notées</a></li>
-                            <li><a class="dropdown-item" href="/entreprises/nouvelles">Nouvelles entreprises</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Statistiques</a>
                     </li>
                 </ul>
 
-                <!-- User section -->
                 <div class="d-flex align-items-center">
                     <span class="navbar-text me-3">Bonjour, Étudiant!</span>
-                    <a href="#" class="btn btn-outline-light btn-sm">Déconnexion</a>
                 </div>
             </div>
         </div>
@@ -495,11 +448,8 @@
                 document.querySelectorAll('.emoji-rating').forEach(e => {
                     e.classList.remove('selected');
                 });
-
-                // Ajouter la classe selected à l'émoji cliqué
                 this.classList.add('selected');
 
-                // Mettre à jour la valeur du champ caché
                 const rating = this.getAttribute('data-rating');
                 document.getElementById('rating').value = rating;
 
