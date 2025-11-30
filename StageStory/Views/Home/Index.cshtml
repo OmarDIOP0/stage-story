@@ -69,12 +69,12 @@
                 <div class="col-lg-6 mb-5">
                     <h2 class="section-title">Ajouter un nouveau stage</h2>
                     <div class="card card-modern">
-                        <div class="card-header-modern">
+                        <div class="card-header-modern">    
                             <h3><i class="bi bi-plus-circle"></i>Nouveau stage</h3>
                         </div>
                         <div class="card-body p-4">
                             <form id="internshipForm" method="post">
-
+                                @Html.AntiForgeryToken()
                                 <div class="mb-3">
                                     <label class="form-label fw-bold">Nom du stage</label>
                                     <input asp-for="Name" type="text" class="form-control" placeholder="Ex: Développeur web front-end">
@@ -339,50 +339,73 @@
     @* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> *@
 
     <script>
-        document.querySelectorAll('.emoji-rating').forEach(emoji => {
-            emoji.addEventListener('click', function() {
-                document.querySelectorAll('.emoji-rating').forEach(e => {
-                    e.classList.remove('selected');
-                });
-                this.classList.add('selected');
+        document.addEventListener('DOMContentLoaded', function() {
 
-                const rating = this.getAttribute('data-rating');
-                document.getElementById('rating').value = rating;
-                const ratingText = document.getElementById('ratingText');
-                const texts = {
-                    1: "Très déçu",
-                    2: "Déçu",
-                    3: "Satisfait",
-                    4: "Très satisfait",
-                    5: "Excellente expérience"
+            // Gestion des emojis
+            document.querySelectorAll('.emoji-rating').forEach(emoji => {
+                emoji.addEventListener('click', function() {
+                    document.querySelectorAll('.emoji-rating').forEach(e => e.classList.remove('selected'));
+                    this.classList.add('selected');
+
+                    const rating = this.getAttribute('data-rating');
+                    document.getElementById('rating').value = rating;
+
+                    const ratingText = document.getElementById('ratingText');
+                    const texts = {
+                        1: "Très déçu",
+                        2: "Déçu",
+                        3: "Satisfait",
+                        4: "Très satisfait",
+                        5: "Excellente expérience"
+                    };
+                    ratingText.textContent = texts[rating];
+                });
+            });
+
+            // Soumission Ajax
+            var internshipForm = document.getElementById('internshipForm');
+            internshipForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                var token = $('#internshipForm input[name="__RequestVerificationToken"]').val();
+
+                var formData = new FormData(internshipForm);
+                var payload = {
+                    Name: formData.get("Name"),
+                    Description: formData.get("Description"),
+                    Rating: parseInt(formData.get("Rating")),
+                    Evaluation: formData.get("Evaluation"),
+                    SalaryAmount: parseFloat(formData.get("SalaryAmount")),
+                    StartDate: formData.get("StartDate"),
+                    EndDate: formData.get("EndDate"),
+                    EntrepriseId: parseInt(formData.get("EntrepriseId")),
+                    SignatureType: formData.get("SignatureType")
                 };
-                ratingText.textContent = texts[rating];
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Internships/Create",
+                    headers: { 'RequestVerificationToken': token },
+                    data: payload,
+                    success: function(res) {
+                        if(res.success) {
+                            alert(res.message);
+                            internshipForm.reset();
+                            document.getElementById('ratingText').textContent = "Sélectionnez une note";
+                            document.querySelectorAll('.emoji-rating').forEach(e => e.classList.remove('selected'));
+                        } else {
+                            alert("Erreurs : " + res.errors.join(", "));
+                        }
+                    },
+                    error: function(err) {
+                        alert("Une erreur est survenue lors de la soumission du formulaire.");
+                        console.log(err);
+                    }
+                });
+
             });
         });
-
-        var internshipForm = document.getElementById('internshipForm');
-        internshipForm.onsubmit = function(e) {
-            e.preventDefault();
-            var successHandler = (res)=>{
-                alert("Formulaire soumis avec succès !");
-            }
-            var errorHandler = (err)=>{
-                alert("Une erreur est survenue lors de la soumission du formulaire.");
-            }
-            var ratingValue = document.getElementById('rating').value;
-            var payload = {
-                Name: internshipForm.Name.value,
-                Description: internshipForm.Description.value,
-                Rating: parseInt(ratingValue),
-                Evaluation: internshipForm.Evaluation.value,
-                SalaryAmount: parseFloat(internshipForm.SalaryAmount.value),
-                StartDate: internshipForm.StartDate.value,
-                EndDate: internshipForm.EndDate.value,
-                EntrepriseId: parseInt(internshipForm.EntrepriseId.value),
-                SignatureType: internshipForm.SignatureType.value
-            };
-            ajaxManager("POST", "/Internships/Create", successHandler, errorHandler,payload);
-        };
     </script>
+
 </body>
 </html>
