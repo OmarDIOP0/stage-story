@@ -76,7 +76,17 @@ namespace StageStory.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Id"] = new SelectList(_context.Enterprises, "Id", "Name", internship.Id);
+            else
+            {
+                var allErrors = ModelState.Values.SelectMany(v => v.Errors)
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+                foreach (var error in allErrors)
+                {
+                    Console.WriteLine(error);
+                }
+            }
+                ViewData["Id"] = new SelectList(_context.Enterprises, "Id", "Name", internship.Id);
             ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "StudentId", internship.StudentId);
             return View(internship);
         }
