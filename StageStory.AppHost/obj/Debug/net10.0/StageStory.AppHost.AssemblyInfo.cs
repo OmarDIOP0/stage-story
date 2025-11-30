@@ -26,7 +26,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StageStory.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18e9cac22f620742b663c40e4de69c21eea21fd7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1782bb777733a0f2e7e2277e9f3c4f7187431fcf")]
 [assembly: System.Reflection.AssemblyProductAttribute("StageStory.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StageStory.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

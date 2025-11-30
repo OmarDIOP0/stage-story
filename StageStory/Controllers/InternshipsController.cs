@@ -54,7 +54,6 @@ namespace StageStory.Controllers
             return View();
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Description,Rating,Evaluation,SalaryAmount,Status,SignatureType,StartDate,EndDate,CreatedDate,StudentId,EntrepriseId")] Internship internship)
@@ -63,12 +62,21 @@ namespace StageStory.Controllers
             {
                 internship.CreatedDate = DateTime.Now;
                 internship.Status = Models.Enum.StatusEnum.Pending;
-                
+                if(internship.StudentId == 0)
+                {
+                    internship.Profile = Models.Enum.ProfileEnum.Anonymous;
+                    internship.StudentId = null;
+                }
+                else
+                {
+                    internship.Profile = Models.Enum.ProfileEnum.Student;
+
+                }
                 _context.Add(internship);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Id"] = new SelectList(_context.Enterprises, "Id", "Id", internship.Id);
+            ViewData["Id"] = new SelectList(_context.Enterprises, "Id", "Name", internship.Id);
             ViewData["StudentId"] = new SelectList(_context.Students, "StudentId", "StudentId", internship.StudentId);
             return View(internship);
         }

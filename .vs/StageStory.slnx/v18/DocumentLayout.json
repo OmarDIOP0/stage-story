@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\wwwroot\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\wwwroot\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\views\\internships\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\views\\internships\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\controllers\\internshipscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\controllers\\internshipscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\models\\internship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\models\\internship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\controllers\\internshipscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\controllers\\internshipscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\models\\enum\\profileenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\models\\enum\\profileenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\views\\internships\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\views\\internships\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,81 +82,72 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "index.css",
-              "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\wwwroot\\css\\index.css",
-              "RelativeDocumentMoniker": "StageStory\\wwwroot\\css\\index.css",
-              "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\wwwroot\\css\\index.css",
-              "RelativeToolTip": "StageStory\\wwwroot\\css\\index.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-30T15:09:05.752Z",
+              "DocumentIndex": 2,
+              "Title": "ProfileEnum.cs",
+              "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Models\\Enum\\ProfileEnum.cs",
+              "RelativeDocumentMoniker": "StageStory\\Models\\Enum\\ProfileEnum.cs",
+              "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Models\\Enum\\ProfileEnum.cs",
+              "RelativeToolTip": "StageStory\\Models\\Enum\\ProfileEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T16:10:14.613Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Views\\Internships\\Create.cshtml",
               "RelativeDocumentMoniker": "StageStory\\Views\\Internships\\Create.cshtml",
               "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Views\\Internships\\Create.cshtml",
               "RelativeToolTip": "StageStory\\Views\\Internships\\Create.cshtml",
-              "ViewState": "AgIAADcAAAAAAAAAAAAiwEUAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-28T20:24:25.449Z"
+              "WhenOpened": "2025-11-28T20:24:25.449Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "StageStory\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "StageStory\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-28T20:15:52.287Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "StageStory\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "StageStory\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAiwHMAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-28T20:15:45.398Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "InternshipsController.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\InternshipsController.cs",
               "RelativeDocumentMoniker": "StageStory\\Controllers\\InternshipsController.cs",
               "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\InternshipsController.cs",
               "RelativeToolTip": "StageStory\\Controllers\\InternshipsController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAIAzwEIAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAIwC0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T19:08:11.988Z"
+              "WhenOpened": "2025-11-28T19:08:11.988Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Internship.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Models\\Internship.cs",
               "RelativeDocumentMoniker": "StageStory\\Models\\Internship.cs",
               "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Models\\Internship.cs",
               "RelativeToolTip": "StageStory\\Models\\Internship.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBIAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T18:58:33.458Z"
+              "WhenOpened": "2025-11-28T18:58:33.458Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "AdminsController.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\AdminsController.cs",
               "RelativeDocumentMoniker": "StageStory\\Controllers\\AdminsController.cs",
@@ -172,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "JwtHelper.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Helper\\JwtHelper.cs",
               "RelativeDocumentMoniker": "StageStory\\Helper\\JwtHelper.cs",
@@ -184,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Program.cs",
               "RelativeDocumentMoniker": "StageStory\\Program.cs",
@@ -196,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Views\\Admins\\Create.cshtml",
               "RelativeDocumentMoniker": "StageStory\\Views\\Admins\\Create.cshtml",
@@ -208,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\appsettings.json",
               "RelativeDocumentMoniker": "StageStory\\appsettings.json",
@@ -220,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Views\\Admins\\Index.cshtml",
               "RelativeDocumentMoniker": "StageStory\\Views\\Admins\\Index.cshtml",
@@ -232,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Views\\Admins\\Delete.cshtml",
               "RelativeDocumentMoniker": "StageStory\\Views\\Admins\\Delete.cshtml",
@@ -244,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "StudentsController.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\StudentsController.cs",
               "RelativeDocumentMoniker": "StageStory\\Controllers\\StudentsController.cs",
@@ -256,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "NotificationsController.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\NotificationsController.cs",
               "RelativeDocumentMoniker": "StageStory\\Controllers\\NotificationsController.cs",
@@ -268,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "EnterprisesController.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\EnterprisesController.cs",
               "RelativeDocumentMoniker": "StageStory\\Controllers\\EnterprisesController.cs",
@@ -280,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "20251128190051_AddField.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Migrations\\20251128190051_AddField.cs",
               "RelativeDocumentMoniker": "StageStory\\Migrations\\20251128190051_AddField.cs",
@@ -292,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "StageStory\\Controllers\\HomeController.cs",

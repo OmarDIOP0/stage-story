@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@model StageStory.Models.Internship;
+@using StageStory.Models.Enum.ConventionTypeEnum;
+
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -163,14 +166,10 @@
 
                                 <div class="mb-3">
                                     <label class="form-label fw-bold">Type de convention</label>
-                                    <select asp-for="SignatureType" class="form-select">
-                                        <option value="1">Convention d'école</option>
-                                        <option value="2">Contrat de stage</option>
-                                        <option value="3">Autre</option>
+                                    <select asp-for="SignatureType" class="form-select"
+                                            asp-items="Html.GetEnumSelectList<ConventionTypeEnum>()">
                                     </select>
                                 </div>
-
-                                <input type="hidden" asp-for="StudentId" value="1" /> <!-- si tu veux tester -->
 
                                 <div class="d-grid">
                                     <button type="submit" class="btn btn-primary-modern btn-lg">
@@ -396,18 +395,6 @@
             });
         });
 
-        // Gestion de la soumission du formulaire
-        document.getElementById('internshipForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Stage enregistré avec succès!');
-            this.reset();
-
-            // Réinitialiser les émojis
-            document.querySelectorAll('.emoji-rating').forEach(e => {
-                e.classList.remove('selected');
-            });
-            document.getElementById('ratingText').textContent = 'Sélectionnez une note';
-        });
     </script>
 </body>
 </html>

@@ -12,13 +12,13 @@ namespace StageStory.Models
         public int? SalaryAmount { get; set; }
         public StatusEnum Status { get; set; }
 
-        public ProfileEnum SignatureType { get; set; }
+        public ConventionTypeEnum SignatureType { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
-        public int StudentId { get; set; }
+        public int? StudentId { get; set; }
         public int EntrepriseId { get; set; }
-
+        public ProfileEnum Profile { get; set; } = ProfileEnum.Anonymous;
         public virtual Student Student { get; set; }
         public virtual Enterprise Enterprise { get; set; }
         public virtual ICollection<Notification> Notifications { get; set; }
