@@ -17,6 +17,7 @@ C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\boot
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\bootstrap@5.3.8\css\bootstrap-reboot.min.css.map
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\css\index.css
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\tailwindcss\colors.min.js
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\js\bootstrap@5.3.8\bootstrap.bundle.min.js.map
@@ -150,6 +151,7 @@ wwwroot\css\bootstrap@5.3.8\bootstrap.rtl.css
 wwwroot\css\bootstrap@5.3.8\bootstrap.rtl.css.map
 wwwroot\css\bootstrap@5.3.8\bootstrap.rtl.min.css
 wwwroot\css\bootstrap@5.3.8\bootstrap.rtl.min.css.map
+wwwroot\css\index.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\mahila.png
