@@ -1,5 +1,5 @@
 ﻿@model StageStory.Models.Internship;
-@using StageStory.Models.Enum.ConventionTypeEnum;
+@using StageStory.Models.Enum;
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -161,7 +161,7 @@
 
                                 <div class="mb-3">
                                     <label class="form-label fw-bold">Entreprise</label>
-                                    <select asp-for="EntrepriseId" class="form-select" asp-items="ViewBag.Id"></select>
+                                    <select asp-for="EntrepriseId" class="form-select" asp-items="ViewBag.EntrepriseList"></select>
                                 </div>
 
                                 <div class="mb-3">
