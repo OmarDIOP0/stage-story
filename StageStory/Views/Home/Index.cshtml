@@ -1,9 +1,4 @@
-﻿@model IEnumerable<StageStory.Models.Internship>;
-@{
-    ViewData["Title"] = "Accueil";
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -14,85 +9,435 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
-        .emoji-rating {
-            font-size: 2rem;
-            cursor: pointer;
-            transition: transform 0.2s;
+        :root {
+            --primary-color: #8e44ad;
+            --secondary-color: #3498db;
+            --accent-color: #2ecc71;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --border-radius: 12px;
+            --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
         }
 
-        .emoji-rating:hover {
-            transform: scale(1.2);
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            background-color: #f9fafb;
         }
 
-        .emoji-rating.selected {
-            transform: scale(1.3);
+        /* Navbar modernisée */
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
         }
 
-        .stage-card {
-            transition: transform 0.3s, box-shadow 0.3s;
+        .navbar-brand {
+            font-size: 1.6rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
         }
 
-        .stage-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            margin: 0 0.2rem;
+            border-radius: 8px;
+            transition: var(--transition);
         }
 
-        .status-badge {
-            font-size: 0.8rem;
-        }
+            .navbar-nav .nav-link:hover {
+                background-color: rgba(255, 255, 255, 0.15);
+            }
 
-        /* .bg-slateGray {
-            background-color: #6c757d;
-        } */
+            .navbar-nav .nav-link.active {
+                background-color: rgba(255, 255, 255, 0.2);
+                position: relative;
+            }
 
-        .text-midnight_text {
-            color: #2c3e50;
-        }
+                .navbar-nav .nav-link.active::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 15%;
+                    width: 70%;
+                    height: 3px;
+                    background-color: white;
+                    border-radius: 2px;
+                }
 
-        .bg-secondary {
-            background-color: #6c757d;
-        }
-
-        .shadow-input-shadow {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-
-        .smallImage {
-            width: 30px;
-            height: 30px;
-        }
-
-        .navbar-nav .nav-link.active {
-            position: relative;
-            font-weight: 600;
-        }
-
-        .navbar-nav .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 32px;
-            height: 4px;
-            background-color: #fff;
-            border-radius: 2px;
-        }
-
-        .dropdown-menu {
-            border: none;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-
-        .dropdown-item.active {
-            background-color: #0d6efd;
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             color: white;
+        }
+
+        .user-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Hero section améliorée */
+        .hero-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .hero-section::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                right: -10%;
+                width: 500px;
+                height: 500px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, rgba(142, 68, 173, 0.1) 0%, rgba(52, 152, 219, 0.1) 100%);
+            }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #5a6c7d;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .promo-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(46, 204, 113, 0.1);
+            color: var(--accent-color);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .search-container {
+            position: relative;
+            max-width: 500px;
+        }
+
+        .search-input {
+            border-radius: 50px;
+            padding: 15px 20px;
+            border: none;
+            box-shadow: var(--box-shadow);
+            font-size: 1rem;
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+
+            .search-btn:hover {
+                transform: translateY(-50%) scale(1.05);
+            }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            border-radius: var(--border-radius);
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+            .feature-item:hover {
+                transform: translateY(-5px);
+            }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero-image {
+            max-width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        /* Section principale */
+        .main-content {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--dark-color);
+            position: relative;
+            display: inline-block;
+        }
+
+            .section-title::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                width: 50px;
+                height: 4px;
+                background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+                border-radius: 2px;
+            }
+
+        /* Cards modernisées */
+        .card-modern {
+            border: none;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            overflow: hidden;
+        }
+
+            .card-modern:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            }
+
+        .card-header-modern {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.25rem 1.5rem;
+            border-bottom: none;
+        }
+
+            .card-header-modern h3 {
+                margin: 0;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+        .form-control, .form-select {
+            border-radius: 8px;
+            padding: 12px 15px;
+            border: 1px solid #e1e5e9;
+            transition: var(--transition);
+        }
+
+            .form-control:focus, .form-select:focus {
+                border-color: var(--primary-color);
+                box-shadow: 0 0 0 0.2rem rgba(142, 68, 173, 0.2);
+            }
+
+        .btn-primary-modern {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+            .btn-primary-modern:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 7px 14px rgba(142, 68, 173, 0.3);
+            }
+
+        /* Émojis d'évaluation */
+        .emoji-rating {
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            padding: 5px;
+        }
+
+            .emoji-rating:hover {
+                transform: scale(1.2);
+            }
+
+            .emoji-rating.selected {
+                transform: scale(1.3);
+                background-color: rgba(142, 68, 173, 0.1);
+                border-radius: 50%;
+            }
+
+        /* Statistiques */
+        .stats-card {
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            color: white;
+            transition: var(--transition);
+        }
+
+            .stats-card:hover {
+                transform: translateY(-5px);
+            }
+
+        .stats-1 {
+            background: linear-gradient(135deg, #8e44ad, #9b59b6);
+        }
+
+        .stats-2 {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+
+        .stats-3 {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Liste des stages */
+        .stage-item {
+            border: none;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+            .stage-item:hover {
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            }
+
+        .stage-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+
+        .stage-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .stage-company {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .stage-rating {
+            color: #f39c12;
+        }
+
+        /* Graphique */
+        .chart-container {
+            height: 150px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 0 1rem;
+        }
+
+        .chart-bar {
+            width: 40px;
+            border-radius: 4px 4px 0 0;
+            transition: var(--transition);
+        }
+
+            .chart-bar:hover {
+                opacity: 0.8;
+            }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--dark-color), #34495e);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+
+            .footer h5 {
+                font-weight: 600;
+                margin-bottom: 1.5rem;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+            .footer-links a:hover {
+                color: white;
+                transform: translateX(5px);
+            }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @@media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-card {
+                margin-bottom: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light sticky-top">
+    <!-- Navigation moderne -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold active" href="#">
+            <a class="navbar-brand" href="#">
                 <i class="bi bi-journal-bookmark-fill me-2"></i>
                 Story Stage
             </a>
@@ -102,7 +447,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="/">Accueil</a>
                     </li>
@@ -114,325 +459,324 @@
                     </li>
                 </ul>
 
-                <div class="d-flex align-items-center">
-                    <span class="navbar-text me-3">Bonjour, Étudiant!</span>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                    <span>Bonjour, Étudiant!</span>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home-section" class="bg-slateGray">
-        <div class="container mx-auto px-4 pt-5">
+    <!-- Hero section améliorée -->
+    <section class="hero-section">
+        <div class="container">
             <div class="row align-items-center">
-                <!-- Colonne de contenu texte -->
-                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-                    <div class="d-flex flex-column gap-4">
-                        <!-- Badge promotion -->
-                        <div class="d-flex gap-2 justify-content-center justify-content-lg-start">
-                            <i class="bi bi-patch-check-fill text-success fs-5"></i>
-                            <p class="text-success fw-semibold text-center text-lg-start mb-0">Bénéficiez de 30% de réduction sur votre premier stage</p>
+                <div class="col-lg-6">
+                    <div class="promo-badge">
+                        <i class="bi bi-patch-check-fill"></i>
+                        <span>Bénéficiez de 30% de réduction sur votre premier stage</span>
+                    </div>
+
+                    <h1 class="hero-title">Faites progresser vos compétences en ingénierie avec nous</h1>
+
+                    <p class="hero-subtitle">Développez vos compétences avec nos cours et bénéficiez de mentors d'entreprises de classe mondiale.</p>
+
+                    <div class="search-container">
+                        <input type="text" class="form-control search-input" placeholder="Rechercher des cours...">
+                        <button class="search-btn">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="bi bi-clock feature-icon"></i>
+                            <h5>Flexible</h5>
+                            <p class="small mb-0">Apprenez à votre rythme</p>
                         </div>
-
-                        <!-- Titre principal -->
-                        <h1 class="text-midnight_text display-5 fw-semibold text-center text-lg-start">
-                            Faites progresser vos compétences en ingénierie avec nous.
-                        </h1>
-
-                        <!-- Sous-titre -->
-                        <h3 class="text-dark-emphasis fs-5 text-center text-lg-start">
-                            Développez vos compétences avec nos cours et bénéficiez de mentors d'entreprises de classe mondiale.
-                        </h3>
-
-                        <!-- Barre de recherche -->
-                        <div class="position-relative rounded-pill mt-3">
-                            <input type="email" name="q" class="form-control form-control-lg py-3 px-4 w-100 text-dark rounded-pill border-0 shadow-input-shadow" placeholder="Rechercher des cours..." autocomplete="off" />
-                            <button class="btn btn-secondary p-3 rounded-pill position-absolute top-50 end-0 translate-middle-y me-2">
-                                <i class="bi bi-search text-white fs-5"></i>
-                            </button>
+                        <div class="feature-item">
+                            <i class="bi bi-graph-up feature-icon"></i>
+                            <h5>Parcours</h5>
+                            <p class="small mb-0">Parcours d'apprentissage personnalisé</p>
                         </div>
-
-                        <!-- Points forts -->
-                        <div class="row justify-content-between pt-4">
-                            <div class="col-4 text-center">
-                                <div class="d-flex flex-column align-items-center gap-1">
-                                    <i class="bi bi-check-circle-fill text-success fs-4"></i>
-                                    <p class="text-dark mb-0 small">Flexible</p>
-                                </div>
-                            </div>
-                            <div class="col-4 text-center">
-                                <div class="d-flex flex-column align-items-center gap-1">
-                                    <i class="bi bi-check-circle-fill text-success fs-4"></i>
-                                    <p class="text-dark mb-0 small">Parcours d'apprentissage</p>
-                                </div>
-                            </div>
-                            <div class="col-4 text-center">
-                                <div class="d-flex flex-column align-items-center gap-1">
-                                    <i class="bi bi-check-circle-fill text-success fs-4"></i>
-                                    <p class="text-dark mb-0 small">Communauté</p>
-                                </div>
-                            </div>
+                        <div class="feature-item">
+                            <i class="bi bi-people feature-icon"></i>
+                            <h5>Communauté</h5>
+                            <p class="small mb-0">Rejoignez notre communauté</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Colonne image -->
-                <div class="col-lg-6 col-md-12 text-center">
-                    <img src="~/images/mahila.png" alt="Étudiante" class="img-fluid rounded shadow" />
+                <div class="col-lg-6 text-center">
+                    <img src="~/images/mahila.png" alt="Étudiante" class="hero-image">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contenu Principal -->
-    <div class="container my-5">
-        <div class="row">
-            <!-- Formulaire d'ajout de stage -->
-            <div class="col-lg-6 mb-5">
-                <div class="card border-0 shadow">
-                    <div class="card-header bg-primary text-white">
-                        <h3 class="card-title mb-0"><i class="bi bi-plus-circle me-2"></i>Ajouter un nouveau stage</h3>
-                    </div>
-                    <div class="card-body p-4">
-                        <form id="internshipForm">
-                            <div class="mb-3">
-                                <label for="name" class="form-label fw-bold">Nom du stage</label>
-                                <input type="text" class="form-control" id="name" placeholder="Ex: Développeur web front-end">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="description" class="form-label fw-bold">Description</label>
-                                <textarea class="form-control" id="description" rows="3" placeholder="Décrivez vos missions principales..."></textarea>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">Évaluation</label>
-                                <div class="d-flex justify-content-between mb-2" id="emojiRating">
-                                    <span class="emoji-rating" data-rating="1">😞</span>
-                                    <span class="emoji-rating" data-rating="2">😐</span>
-                                    <span class="emoji-rating" data-rating="3">😊</span>
-                                    <span class="emoji-rating" data-rating="4">😄</span>
-                                    <span class="emoji-rating" data-rating="5">🤩</span>
-                                </div>
-                                <input type="hidden" id="rating" name="rating" value="0">
-                                <div class="text-center text-muted small" id="ratingText">Sélectionnez une note</div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="evaluation" class="form-label fw-bold">Commentaire d'évaluation</label>
-                                <textarea class="form-control" id="evaluation" rows="3" placeholder="Partagez votre expérience globale..."></textarea>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="salaryAmount" class="form-label fw-bold">Salaire (€)</label>
-                                <input type="number" class="form-control" id="salaryAmount" placeholder="Montant mensuel">
-                            </div>
-
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label for="startDate" class="form-label fw-bold">Date de début</label>
-                                    <input type="date" class="form-control" id="startDate">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="endDate" class="form-label fw-bold">Date de fin</label>
-                                    <input type="date" class="form-control" id="endDate">
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="entreprise" class="form-label fw-bold">Entreprise</label>
-                                <input type="text" class="form-control" id="entreprise" placeholder="Nom de l'entreprise">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="signatureType" class="form-label fw-bold">Type de convention</label>
-                                <select class="form-select" id="signatureType">
-                                    <option value="1">Convention d'école</option>
-                                    <option value="2">Contrat de stage</option>
-                                    <option value="3">Autre</option>
-                                </select>
-                            </div>
-
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-primary btn-lg">
-                                    <i class="bi bi-check-circle me-2"></i>Enregistrer le stage
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Liste des stages et statistiques -->
-            <div class="col-lg-6">
-                <!-- Statistiques rapides -->
-                <div class="row mb-4">
-                    <div class="col-md-4 mb-3">
-                        <div class="card bg-primary text-white text-center">
-                            <div class="card-body py-3">
-                                <h4 class="fw-bold">5</h4>
-                                <p class="mb-0 small">Stages évalués</p>
-                            </div>
+    <!-- Contenu principal -->
+    <section class="main-content">
+        <div class="container">
+            <div class="row">
+                <!-- Formulaire d'ajout de stage -->
+                <div class="col-lg-6 mb-5">
+                    <h2 class="section-title">Ajouter un nouveau stage</h2>
+                    <div class="card card-modern">
+                        <div class="card-header-modern">
+                            <h3><i class="bi bi-plus-circle"></i>Nouveau stage</h3>
                         </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card bg-success text-white text-center">
-                            <div class="card-body py-3">
-                                <h4 class="fw-bold">3</h4>
-                                <p class="mb-0 small">Validés</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card bg-warning text-white text-center">
-                            <div class="card-body py-3">
-                                <h4 class="fw-bold">2</h4>
-                                <p class="mb-0 small">En attente</p>
-                            </div>
+                        <div class="card-body p-4">
+                            <form id="internshipForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label fw-bold">Nom du stage</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Ex: Développeur web front-end">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="description" class="form-label fw-bold">Description</label>
+                                    <textarea class="form-control" id="description" rows="3" placeholder="Décrivez vos missions principales..."></textarea>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Évaluation</label>
+                                    <div class="d-flex justify-content-between mb-2" id="emojiRating">
+                                        <span class="emoji-rating" data-rating="1">😞</span>
+                                        <span class="emoji-rating" data-rating="2">😐</span>
+                                        <span class="emoji-rating" data-rating="3">😊</span>
+                                        <span class="emoji-rating" data-rating="4">😄</span>
+                                        <span class="emoji-rating" data-rating="5">🤩</span>
+                                    </div>
+                                    <input type="hidden" id="rating" name="rating" value="0">
+                                    <div class="text-center text-muted small" id="ratingText">Sélectionnez une note</div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="evaluation" class="form-label fw-bold">Commentaire d'évaluation</label>
+                                    <textarea class="form-control" id="evaluation" rows="3" placeholder="Partagez votre expérience globale..."></textarea>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="salaryAmount" class="form-label fw-bold">Salaire (€)</label>
+                                    <input type="number" class="form-control" id="salaryAmount" placeholder="Montant mensuel">
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="startDate" class="form-label fw-bold">Date de début</label>
+                                        <input type="date" class="form-control" id="startDate">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="endDate" class="form-label fw-bold">Date de fin</label>
+                                        <input type="date" class="form-control" id="endDate">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="entreprise" class="form-label fw-bold">Entreprise</label>
+                                    <input type="text" class="form-control" id="entreprise" placeholder="Nom de l'entreprise">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="signatureType" class="form-label fw-bold">Type de convention</label>
+                                    <select class="form-select" id="signatureType">
+                                        <option value="1">Convention d'école</option>
+                                        <option value="2">Contrat de stage</option>
+                                        <option value="3">Autre</option>
+                                    </select>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary-modern btn-lg">
+                                        <i class="bi bi-check-circle me-2"></i>Enregistrer le stage
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
 
-                <!-- Liste des stages -->
-                <div class="card border-0 shadow">
-                    <div class="card-header bg-light">
-                        <h3 class="card-title mb-0"><i class="bi bi-list-check me-2"></i>Mes stages récents</h3>
-                    </div>
-                    <div class="card-body p-0">
-                        <div class="list-group list-group-flush">
-                            <!-- Stage 1 -->
-                            <div class="list-group-item p-3 stage-card">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <h5 class="fw-bold mb-0">Développeur Full Stack</h5>
-                                    <span class="badge bg-success status-badge">Validé</span>
-                                </div>
-                                <p class="text-muted mb-2">TechCorp - Du 01/03/2023 au 30/08/2023</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <span class="text-warning">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-half"></i>
-                                        </span>
-                                        <span class="ms-2">4.5/5</span>
-                                    </div>
-                                    <button class="btn btn-sm btn-outline-primary">Voir détails</button>
-                                </div>
-                            </div>
+                <!-- Statistiques et liste des stages -->
+                <div class="col-lg-6">
+                    <h2 class="section-title">Mes stages</h2>
 
-                            <!-- Stage 2 -->
-                            <div class="list-group-item p-3 stage-card">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <h5 class="fw-bold mb-0">Assistant Marketing Digital</h5>
-                                    <span class="badge bg-warning text-dark status-badge">En attente</span>
-                                </div>
-                                <p class="text-muted mb-2">MarketPlus - Du 15/05/2023 au 15/11/2023</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <span class="text-warning">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star"></i>
-                                        </span>
-                                        <span class="ms-2">4/5</span>
-                                    </div>
-                                    <button class="btn btn-sm btn-outline-primary">Voir détails</button>
-                                </div>
+                    <!-- Statistiques rapides -->
+                    <div class="row mb-4">
+                        <div class="col-md-4 mb-3">
+                            <div class="stats-card stats-1">
+                                <div class="stats-number">5</div>
+                                <p class="mb-0">Stages évalués</p>
                             </div>
-
-                            <!-- Stage 3 -->
-                            <div class="list-group-item p-3 stage-card">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <h5 class="fw-bold mb-0">Analyste données</h5>
-                                    <span class="badge bg-success status-badge">Validé</span>
-                                </div>
-                                <p class="text-muted mb-2">DataSolutions - Du 10/01/2023 au 10/04/2023</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <span class="text-warning">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star"></i>
-                                            <i class="bi bi-star"></i>
-                                        </span>
-                                        <span class="ms-2">3/5</span>
-                                    </div>
-                                    <button class="btn btn-sm btn-outline-primary">Voir détails</button>
-                                </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="stats-card stats-2">
+                                <div class="stats-number">3</div>
+                                <p class="mb-0">Validés</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="stats-card stats-3">
+                                <div class="stats-number">2</div>
+                                <p class="mb-0">En attente</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card-footer bg-light text-center">
-                        <a href="#" class="btn btn-outline-primary">Voir tous mes stages</a>
-                    </div>
-                </div>
 
-                <!-- Graphique simple -->
-                <div class="card border-0 shadow mt-4">
-                    <div class="card-header bg-light">
-                        <h5 class="card-title mb-0"><i class="bi bi-graph-up me-2"></i>Répartition de mes stages</h5>
+                    <!-- Liste des stages -->
+                    <div class="card card-modern mb-4">
+                        <div class="card-header-modern">
+                            <h3><i class="bi bi-list-check"></i>Mes stages récents</h3>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush">
+                                <!-- Stage 1 -->
+                                <div class="list-group-item stage-item">
+                                    <div class="stage-header">
+                                        <div>
+                                            <h5 class="stage-title">Développeur Full Stack</h5>
+                                            <p class="stage-company mb-1">TechCorp - Du 01/03/2023 au 30/08/2023</p>
+                                        </div>
+                                        <span class="badge bg-success">Validé</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="stage-rating">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                            </span>
+                                            <span class="ms-2">4.5/5</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-primary">Voir détails</button>
+                                    </div>
+                                </div>
+
+                                <!-- Stage 2 -->
+                                <div class="list-group-item stage-item">
+                                    <div class="stage-header">
+                                        <div>
+                                            <h5 class="stage-title">Assistant Marketing Digital</h5>
+                                            <p class="stage-company mb-1">MarketPlus - Du 15/05/2023 au 15/11/2023</p>
+                                        </div>
+                                        <span class="badge bg-warning text-dark">En attente</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="stage-rating">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star"></i>
+                                            </span>
+                                            <span class="ms-2">4/5</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-primary">Voir détails</button>
+                                    </div>
+                                </div>
+
+                                <!-- Stage 3 -->
+                                <div class="list-group-item stage-item">
+                                    <div class="stage-header">
+                                        <div>
+                                            <h5 class="stage-title">Analyste données</h5>
+                                            <p class="stage-company mb-1">DataSolutions - Du 10/01/2023 au 10/04/2023</p>
+                                        </div>
+                                        <span class="badge bg-success">Validé</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="stage-rating">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star"></i>
+                                                <i class="bi bi-star"></i>
+                                            </span>
+                                            <span class="ms-2">3/5</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-primary">Voir détails</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center py-3">
+                            <a href="#" class="btn btn-outline-primary">Voir tous mes stages</a>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <div class="d-flex align-items-end justify-content-between text-center" style="height: 150px;">
-                            <div class="d-flex flex-column align-items-center">
-                                <div class="bg-primary rounded-top mb-1" style="width: 40px; height: 100px;"></div>
-                                <small>Validés</small>
-                                <div class="fw-bold">3</div>
-                            </div>
-                            <div class="d-flex flex-column align-items-center">
-                                <div class="bg-warning rounded-top mb-1" style="width: 40px; height: 70px;"></div>
-                                <small>En attente</small>
-                                <div class="fw-bold">2</div>
-                            </div>
-                            <div class="d-flex flex-column align-items-center">
-                                <div class="bg-danger rounded-top mb-1" style="width: 40px; height: 30px;"></div>
-                                <small>Refusés</small>
-                                <div class="fw-bold">0</div>
+
+                    <!-- Graphique simple -->
+                    <div class="card card-modern">
+                        <div class="card-header-modern">
+                            <h3><i class="bi bi-graph-up"></i>Répartition de mes stages</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container">
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="chart-bar bg-primary mb-1" style="height: 100px;"></div>
+                                    <small>Validés</small>
+                                    <div class="fw-bold">3</div>
+                                </div>
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="chart-bar bg-warning mb-1" style="height: 70px;"></div>
+                                    <small>En attente</small>
+                                    <div class="fw-bold">2</div>
+                                </div>
+                                <div class="d-flex flex-column align-items-center">
+                                    <div class="chart-bar bg-danger mb-1" style="height: 30px;"></div>
+                                    <small>Refusés</small>
+                                    <div class="fw-bold">0</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
+    <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h5 class="fw-bold mb-3">
-                        <i class="bi bi-journal-bookmark-fill me-2"></i>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>
+                        <i class="bi bi-journal-bookmark-fill"></i>
                         Story Stage
                     </h5>
-                    <p class="text-muted">La plateforme d'évaluation de stages pour partager vos expériences et aider la communauté étudiante.</p>
+                    <p class="text-light">La plateforme d'évaluation de stages pour partager vos expériences et aider la communauté étudiante.</p>
                 </div>
-                <div class="col-md-3">
-                    <h6 class="fw-bold mb-3">Navigation</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Accueil</a></li>
-                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Mes Stages</a></li>
-                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Statistiques</a></li>
-                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Mon Profil</a></li>
-                    </ul>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Navigation</h6>
+                    <div class="footer-links">
+                        <a href="#">Accueil</a>
+                        <a href="#">Mes Stages</a>
+                        <a href="#">Statistiques</a>
+                        <a href="#">Mon Profil</a>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <h6 class="fw-bold mb-3">Légal</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Mentions légales</a></li>
-                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Confidentialité</a></li>
-                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">CGU</a></li>
-                    </ul>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Légal</h6>
+                    <div class="footer-links">
+                        <a href="#">Mentions légales</a>
+                        <a href="#">Confidentialité</a>
+                        <a href="#">CGU</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h6>Contact</h6>
+                    <div class="footer-links">
+                        <a href="#"><i class="bi bi-envelope me-2"></i>contact@storystage.fr</a>
+                        <a href="#"><i class="bi bi-telephone me-2"></i>+33 1 23 45 67 89</a>
+                        <a href="#"><i class="bi bi-geo-alt me-2"></i>Paris, France</a>
+                    </div>
                 </div>
             </div>
-            <hr class="my-3 bg-secondary">
-            <div class="text-center">
-                <p class="text-muted mb-0">&copy; 2023 Story Stage. Tous droits réservés.</p>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2023 Story Stage. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
