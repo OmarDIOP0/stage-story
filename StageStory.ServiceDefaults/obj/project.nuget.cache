@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "dR8mOuRAmyw=",
+  "dgSpecHash": "s0werOkmJ10=",
   "success": true,
   "projectFilePath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory.ServiceDefaults\\StageStory.ServiceDefaults.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.build\\18.0.2\\microsoft.build.18.0.2.nupkg.sha512",
+    "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.build.framework\\18.0.2\\microsoft.build.framework.18.0.2.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.extensions.ambientmetadata.application\\9.9.0\\microsoft.extensions.ambientmetadata.application.9.9.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.extensions.compliance.abstractions\\9.9.0\\microsoft.extensions.compliance.abstractions.9.9.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.extensions.dependencyinjection.autoactivation\\9.9.0\\microsoft.extensions.dependencyinjection.autoactivation.9.9.0.nupkg.sha512",
@@ -15,6 +17,7 @@
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.extensions.servicediscovery.abstractions\\9.5.0\\microsoft.extensions.servicediscovery.abstractions.9.5.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.extensions.telemetry\\9.9.0\\microsoft.extensions.telemetry.9.9.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.extensions.telemetry.abstractions\\9.9.0\\microsoft.extensions.telemetry.abstractions.9.9.0.nupkg.sha512",
+    "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.net.stringtools\\18.0.2\\microsoft.net.stringtools.18.0.2.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\opentelemetry\\1.12.0\\opentelemetry.1.12.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\opentelemetry.api\\1.12.0\\opentelemetry.api.1.12.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\opentelemetry.api.providerbuilderextensions\\1.12.0\\opentelemetry.api.providerbuilderextensions.1.12.0.nupkg.sha512",
@@ -25,7 +28,10 @@
     "C:\\Users\\bmd tech\\.nuget\\packages\\opentelemetry.instrumentation.runtime\\1.12.0\\opentelemetry.instrumentation.runtime.1.12.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\polly.core\\8.4.2\\polly.core.8.4.2.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\polly.extensions\\8.4.2\\polly.extensions.8.4.2.nupkg.sha512",
-    "C:\\Users\\bmd tech\\.nuget\\packages\\polly.ratelimiting\\8.4.2\\polly.ratelimiting.8.4.2.nupkg.sha512"
+    "C:\\Users\\bmd tech\\.nuget\\packages\\polly.ratelimiting\\8.4.2\\polly.ratelimiting.8.4.2.nupkg.sha512",
+    "C:\\Users\\bmd tech\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.0\\system.configuration.configurationmanager.9.0.0.nupkg.sha512",
+    "C:\\Users\\bmd tech\\.nuget\\packages\\system.reflection.metadataloadcontext\\9.0.0\\system.reflection.metadataloadcontext.9.0.0.nupkg.sha512",
+    "C:\\Users\\bmd tech\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.6\\system.security.cryptography.protecteddata.9.0.6.nupkg.sha512"
   ],
   "logs": []
 }

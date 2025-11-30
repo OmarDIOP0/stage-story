@@ -56,7 +56,17 @@ namespace StageStory.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(enterprise);
+            else
+            {
+                var allErrors = ModelState.Values.SelectMany(v => v.Errors)
+                                    .Select(e => e.ErrorMessage)
+                                    .ToList();
+                foreach (var error in allErrors)
+                    {
+                    Console.WriteLine(error);
+                }
+            }
+                return View(enterprise);
         }
 
         // GET: Enterprises/Edit/5

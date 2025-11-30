@@ -14,7 +14,7 @@ namespace StageStory.Models
         public int Year { get; set; }
         public string? University { get; set; }
 
-        public virtual ICollection<Notification> Notifications { get; set; }
-        public virtual ICollection<Internship> Internships { get; set; }
+        public virtual ICollection<Notification>? Notifications { get; set; }
+        public virtual ICollection<Internship>? Internships { get; set; }
     }
 }

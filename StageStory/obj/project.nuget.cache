@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "67jp7WaebAY=",
+  "dgSpecHash": "Yw+0Lvp5vV4=",
   "success": true,
   "projectFilePath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.csproj",
   "expectedPackageFiles": [
@@ -61,8 +61,8 @@
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.24\\microsoft.aspnetcore.razor.language.6.0.24.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.4\\microsoft.bcl.cryptography.9.0.4.nupkg.sha512",
-    "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.build\\17.11.4\\microsoft.build.17.11.4.nupkg.sha512",
-    "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.build.framework\\17.14.28\\microsoft.build.framework.17.14.28.nupkg.sha512",
+    "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.build\\18.0.2\\microsoft.build.18.0.2.nupkg.sha512",
+    "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.build.framework\\18.0.2\\microsoft.build.framework.18.0.2.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.build.locator\\1.9.1\\microsoft.build.locator.1.9.1.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.build.tasks.core\\17.14.28\\microsoft.build.tasks.core.17.14.28.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.build.utilities.core\\17.14.28\\microsoft.build.utilities.core.17.14.28.nupkg.sha512",
@@ -109,7 +109,7 @@
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.identitymodel.protocols\\8.0.1\\microsoft.identitymodel.protocols.8.0.1.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\8.0.1\\microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.0.1\\microsoft.identitymodel.tokens.8.0.1.nupkg.sha512",
-    "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.net.stringtools\\17.14.28\\microsoft.net.stringtools.17.14.28.nupkg.sha512",
+    "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.net.stringtools\\18.0.2\\microsoft.net.stringtools.18.0.2.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\microsoft.visualstudio.azure.containers.tools.targets.1.23.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\10.0.0-rc.1.25458.5\\microsoft.visualstudio.web.codegeneration.10.0.0-rc.1.25458.5.nupkg.sha512",
@@ -154,25 +154,12 @@
     "C:\\Users\\bmd tech\\.nuget\\packages\\system.formats.nrbf\\9.0.0\\system.formats.nrbf.9.0.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.0.1\\system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\system.memory.data\\8.0.1\\system.memory.data.8.0.1.nupkg.sha512",
-    "C:\\Users\\bmd tech\\.nuget\\packages\\system.reflection.metadataloadcontext\\8.0.0\\system.reflection.metadataloadcontext.8.0.0.nupkg.sha512",
+    "C:\\Users\\bmd tech\\.nuget\\packages\\system.reflection.metadataloadcontext\\9.0.0\\system.reflection.metadataloadcontext.9.0.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\system.resources.extensions\\9.0.0\\system.resources.extensions.9.0.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\system.security.cryptography.pkcs\\9.0.4\\system.security.cryptography.pkcs.9.0.4.nupkg.sha512",
-    "C:\\Users\\bmd tech\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.4\\system.security.cryptography.protecteddata.9.0.4.nupkg.sha512",
+    "C:\\Users\\bmd tech\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.6\\system.security.cryptography.protecteddata.9.0.6.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\system.security.permissions\\9.0.0\\system.security.permissions.9.0.0.nupkg.sha512",
     "C:\\Users\\bmd tech\\.nuget\\packages\\system.windows.extensions\\9.0.0\\system.windows.extensions.9.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "message": "Le package 'Microsoft.Build' 17.11.4 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-w3q9-fxm7-j8fq.",
-      "projectPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\StageStory.csproj",
-      "libraryId": "Microsoft.Build",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  "logs": []
 }

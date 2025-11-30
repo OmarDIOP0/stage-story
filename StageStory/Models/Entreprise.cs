@@ -8,6 +8,6 @@
         public string? SectorActivity { get; set; }
         public string? Address { get; set; }
 
-        public virtual ICollection<Internship> Internships { get; set; }
+        public virtual ICollection<Internship>? Internships { get; set; }
     }
 }
