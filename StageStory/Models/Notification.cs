@@ -12,8 +12,8 @@ namespace StageStory.Models
         public int StudentId { get; set; }
         public int? InternshipId { get; set; }
 
-        public virtual Student Student { get; set; }
-        public virtual Internship Internship { get; set; }
+        public virtual Student? Student { get; set; }
+        public virtual Internship? Internship { get; set; }
 
     }
 }

@@ -52,7 +52,7 @@ namespace StageStory.Data
             modelBuilder.Entity<Enterprise>()
                 .HasMany(e => e.Internships)
                 .WithOne(i => i.Enterprise)
-                .HasForeignKey(i => i.Id)
+                .HasForeignKey(i => i.EntrepriseId)
                 .OnDelete(DeleteBehavior.Cascade);
             // ---------- INTERNSHIP ----------
             modelBuilder.Entity<Internship>()

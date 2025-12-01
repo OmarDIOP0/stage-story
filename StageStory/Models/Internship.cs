@@ -19,8 +19,8 @@ namespace StageStory.Models
         public int? StudentId { get; set; }
         public int EntrepriseId { get; set; }
         public ProfileEnum Profile { get; set; } = ProfileEnum.Anonymous;
-        public virtual Student Student { get; set; }
-        public virtual Enterprise Enterprise { get; set; }
+        public virtual Student? Student { get; set; }
+        public virtual Enterprise? Enterprise { get; set; }
         public virtual ICollection<Notification>? Notifications { get; set; }
     }
 }

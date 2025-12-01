@@ -75,7 +75,10 @@ namespace StageStory.Migrations
             modelBuilder.Entity("StageStory.Models.Internship", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
@@ -118,6 +121,8 @@ namespace StageStory.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EntrepriseId");
 
                     b.HasIndex("StudentId");
 
@@ -202,7 +207,7 @@ namespace StageStory.Migrations
                 {
                     b.HasOne("StageStory.Models.Enterprise", "Enterprise")
                         .WithMany("Internships")
-                        .HasForeignKey("Id")
+                        .HasForeignKey("EntrepriseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -105,6 +105,7 @@ C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\boot
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\bootstrap@5.3.8\js\bootstrap.esm.js
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\bootstrap@5.3.8\js\bootstrap.min.js
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\js\custom-script.js
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\js\bootstrap@5.3.8\bootstrap.esm.js
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\tailwindcss\flatten-color-palette.min.js
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\bootstrap@5.3.8\css\bootstrap.rtl.min.css
@@ -167,6 +168,7 @@ wwwroot\js\bootstrap@5.3.8\bootstrap.js
 wwwroot\js\bootstrap@5.3.8\bootstrap.js.map
 wwwroot\js\bootstrap@5.3.8\bootstrap.min.js
 wwwroot\js\bootstrap@5.3.8\bootstrap.min.js.map
+wwwroot\js\custom-script.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap@5.3.8\css\bootstrap-grid.css
 wwwroot\lib\bootstrap@5.3.8\css\bootstrap-grid.css.map

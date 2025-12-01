@@ -44,6 +44,7 @@ public class HomeController : Controller
         {
             internship.Profile = Models.Enum.ProfileEnum.Student;
         }
+        
 
         _context.Add(internship);
         await _context.SaveChangesAsync();
