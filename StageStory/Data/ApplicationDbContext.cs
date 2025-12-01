@@ -71,7 +71,7 @@ namespace StageStory.Data
 
             modelBuilder.Entity<Notification>()
                 .Property(n => n.Status)
-                .HasConversion<int>(); // Enum → int
+                .HasConversion<int>(); 
 
 
             // ---------- ENUMS ----------
