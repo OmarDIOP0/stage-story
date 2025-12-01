@@ -46,7 +46,7 @@
                 @Html.DisplayNameFor(model => model.EntrepriseId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Student.Name ?? "Anonyme")
+                @Html.DisplayNameFor(model => model.Student)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Enterprise)
@@ -91,7 +91,7 @@
                 @Html.DisplayFor(modelItem => item.EntrepriseId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Student.StudentId)
+                    @(item.Student != null ? item.Student.Name : "Anonyme")
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Enterprise.Id)

@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Migrations\\20251130205040_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StageStory\\Migrations\\20251130205040_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\controllers\\enterprisescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\controllers\\enterprisescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\views\\internships\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\views\\internships\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\models\\internship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|c:\\users\\bmd tech\\onedrive\\bureau\\project\\stagestory\\stagestory\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D662B5A-9BA6-4AC7-BDCC-46668982B4ED}|StageStory\\StageStory.csproj|solutionrelative:stagestory\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Migrations\\20251130203549_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,63 +54,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20251130205040_InitialMigration.cs",
-              "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Migrations\\20251130205040_InitialMigration.cs",
-              "RelativeDocumentMoniker": "StageStory\\Migrations\\20251130205040_InitialMigration.cs",
-              "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Migrations\\20251130205040_InitialMigration.cs",
-              "RelativeToolTip": "StageStory\\Migrations\\20251130205040_InitialMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T20:50:40.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "20251130203549_initial.cs",
-              "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Migrations\\20251130203549_initial.cs",
-              "RelativeDocumentMoniker": "StageStory\\Migrations\\20251130203549_initial.cs",
-              "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Migrations\\20251130203549_initial.cs",
-              "RelativeToolTip": "StageStory\\Migrations\\20251130203549_initial.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T20:35:49.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Views\\Internships\\Index.cshtml",
+              "RelativeDocumentMoniker": "StageStory\\Views\\Internships\\Index.cshtml",
+              "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Views\\Internships\\Index.cshtml",
+              "RelativeToolTip": "StageStory\\Views\\Internships\\Index.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAuwGsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T20:55:42.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnterprisesController.cs",
+              "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\EnterprisesController.cs",
+              "RelativeDocumentMoniker": "StageStory\\Controllers\\EnterprisesController.cs",
+              "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\EnterprisesController.cs",
+              "RelativeToolTip": "StageStory\\Controllers\\EnterprisesController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwDMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T19:40:38.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "StageStory\\Data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "StageStory\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAADwv1IAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-30T20:24:42.953Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "StageStory\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\HomeController.cs",
               "RelativeToolTip": "StageStory\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAiwDEAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-30T19:36:05.993Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
+              "Title": "20251130203549_initial.cs",
+              "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Migrations\\20251130203549_initial.cs",
+              "RelativeDocumentMoniker": "StageStory\\Migrations\\20251130203549_initial.cs",
+              "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Migrations\\20251130203549_initial.cs",
+              "RelativeToolTip": "StageStory\\Migrations\\20251130203549_initial.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T20:35:49.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Internship.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Models\\Internship.cs",
               "RelativeDocumentMoniker": "StageStory\\Models\\Internship.cs",
@@ -114,12 +129,11 @@
               "RelativeToolTip": "StageStory\\Models\\Internship.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T17:37:29.822Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T17:37:29.822Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Student.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Models\\Student.cs",
               "RelativeDocumentMoniker": "StageStory\\Models\\Student.cs",
@@ -127,38 +141,33 @@
               "RelativeToolTip": "StageStory\\Models\\Student.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAzwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T19:48:59.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T19:48:59.478Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "20251130202845_NewMigrations.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Migrations\\20251130202845_NewMigrations.cs",
               "RelativeDocumentMoniker": "StageStory\\Migrations\\20251130202845_NewMigrations.cs",
               "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Migrations\\20251130202845_NewMigrations.cs",
               "RelativeToolTip": "StageStory\\Migrations\\20251130202845_NewMigrations.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T20:28:45.91Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T20:28:45.91Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "20251130203053_NewMigrations.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Migrations\\20251130203053_NewMigrations.cs",
               "RelativeDocumentMoniker": "StageStory\\Migrations\\20251130203053_NewMigrations.cs",
               "ToolTip": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Migrations\\20251130203053_NewMigrations.cs",
               "RelativeToolTip": "StageStory\\Migrations\\20251130203053_NewMigrations.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T20:30:53.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T20:30:53.451Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "InternshipsController.cs",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Controllers\\InternshipsController.cs",
               "RelativeDocumentMoniker": "StageStory\\Controllers\\InternshipsController.cs",
@@ -166,12 +175,11 @@
               "RelativeToolTip": "StageStory\\Controllers\\InternshipsController.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAuwFMAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T17:37:41.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T17:37:41.109Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\bmd tech\\OneDrive\\Bureau\\Project\\StageStory\\StageStory\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "StageStory\\Views\\Home\\Index.cshtml",
@@ -179,8 +187,7 @@
               "RelativeToolTip": "StageStory\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAIcBAAAAAAAAAAAIwJoBAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-28T20:15:45.398Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-28T20:15:45.398Z"
             }
           ]
         }
