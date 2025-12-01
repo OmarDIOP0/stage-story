@@ -60,6 +60,7 @@
         border-radius: var(--border-radius);
         overflow: hidden;
         box-shadow: var(--box-shadow);
+        width: 100% !important;
     }
 
         .table-custom thead th {
@@ -76,7 +77,6 @@
 
             .table-custom tbody tr:hover {
                 background-color: rgba(142, 68, 173, 0.05);
-                transform: translateY(-2px);
             }
 
     .rating-stars {
@@ -108,6 +108,69 @@
         padding-bottom: 1rem;
         border-bottom: 3px solid var(--primary-color);
     }
+
+    /* Styles DataTables personnalisés */
+    .dataTables_wrapper {
+        padding: 20px;
+    }
+
+    .dataTables_filter input {
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 8px 12px;
+        width: 250px !important;
+    }
+
+    .dataTables_length select {
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 8px;
+    }
+
+    .dataTables_paginate .paginate_button {
+        border-radius: 6px !important;
+        margin: 0 2px;
+        border: 1px solid #dee2e6 !important;
+    }
+
+        .dataTables_paginate .paginate_button.current {
+            background: var(--primary-color) !important;
+            border-color: var(--primary-color) !important;
+            color: white !important;
+        }
+
+        .dataTables_paginate .paginate_button:hover {
+            background: rgba(142, 68, 173, 0.1) !important;
+            border-color: var(--primary-color) !important;
+            color: var(--primary-color) !important;
+        }
+
+    .dt-buttons .btn {
+        background-color: var(--secondary-color);
+        color: white;
+        border: none;
+        margin-right: 5px;
+        padding: 8px 15px;
+    }
+
+        .dt-buttons .btn:hover {
+            background-color: #2980b9;
+        }
+
+    /* Style pour les en-têtes de colonnes triés */
+    table.dataTable thead .sorting,
+    table.dataTable thead .sorting_asc,
+    table.dataTable thead .sorting_desc {
+        background-position: center right 15px;
+    }
+
+    table.dataTable thead .sorting_asc {
+        background-color: rgba(142, 68, 173, 0.1);
+    }
+
+    table.dataTable thead .sorting_desc {
+        background-color: rgba(142, 68, 173, 0.1);
+    }
 </style>
 
 <div class="container-fluid py-4">
@@ -117,19 +180,94 @@
         </div>
     </div>
 
-    <div class="card border-0 shadow-lg mb-5">
+    <!-- Statistiques -->
+    <div class="row mb-4">
+        <div class="col-md-3 mb-3">
+            <div class="card border-0 shadow-sm h-100" style="border-left: 4px solid var(--primary-color);">
+                <div class="card-body">
+                    <h6 class="text-muted">Total Stages</h6>
+                    <h3 class="mb-0">@Model.Count()</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-0 shadow-sm h-100" style="border-left: 4px solid var(--accent-color);">
+                <div class="card-body">
+                    <h6 class="text-muted">Stages en Attente</h6>
+                    <h3 class="mb-0">@Model.Count(s => s.Status == StatusEnum.Pending)</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-0 shadow-sm h-100" style="border-left: 4px solid var(--secondary-color);">
+                <div class="card-body">
+                    <h6 class="text-muted">Stages Approuvés</h6>
+                    <h3 class="mb-0">@Model.Count(s => s.Status == StatusEnum.Approved)</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card border-0 shadow-sm h-100" style="border-left: 4px solid #FFD700;">
+                <div class="card-body">
+                    <h6 class="text-muted">Note Moyenne</h6>
+                    <h3 class="mb-0">
+                        @{
+                            var ratedStages = Model.Where(s => s.Rating > 0);
+                            var averageRating = ratedStages.Any() ? ratedStages.Average(s => s.Rating) : 0;
+                        }
+                        @String.Format("{0:0.0}", averageRating)/5
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-lg">
         <div class="card-header card-header-custom py-3">
             <div class="d-flex justify-content-between align-items-center">
                 <h5 class="mb-0">Liste des Stages</h5>
-                <a asp-action="Create" class="btn btn-light btn-sm">
-                    <i class="bi bi-plus-circle me-2"></i>Nouveau Stage
-                </a>
+                <div>
+                    <a asp-action="Create" class="btn btn-light btn-sm me-2">
+                        <i class="bi bi-plus-circle me-1"></i>Nouveau Stage
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="card-body p-0">
+        <div class="card-body">
+            <!-- Barre d'outils DataTables -->
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="dataTables_length d-inline-block">
+                        <label class="me-2">
+                            Afficher
+                            <select name="internships-table_length" class="form-select form-select-sm">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select> entrées
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="dt-buttons btn-group">
+                        <button class="btn btn-sm btn-secondary" id="export-csv">
+                            <i class="bi bi-file-earmark-spreadsheet me-1"></i>CSV
+                        </button>
+                        <button class="btn btn-sm btn-secondary" id="export-excel">
+                            <i class="bi bi-file-excel me-1"></i>Excel
+                        </button>
+                        <button class="btn btn-sm btn-secondary" id="export-pdf">
+                            <i class="bi bi-file-pdf me-1"></i>PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table avec DataTables -->
             <div class="table-responsive">
-                <table class="table table-hover table-custom mb-0">
+                <table id="internships-table" class="table table-hover table-custom">
                     <thead>
                         <tr>
                             <th>Nom</th>
@@ -149,11 +287,9 @@
                             <tr>
                                 <td>
                                     <strong>@Html.DisplayFor(modelItem => item.Name)</strong>
-                                    <small class="d-block text-muted">@Html.DisplayFor(modelItem => item.Description)</small>
+                                    <small class="d-block text-muted">@(item.Description?.Length > 50 ? item.Description.Substring(0, 50) + "..." : item.Description)</small>
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Enterprise.Name)
-                                </td>
+                                <td>@Html.DisplayFor(modelItem => item.Enterprise.Name)</td>
                                 <td>
                                     <span class="badge bg-info bg-opacity-10 text-info">
                                         @(item.Student != null ? item.Student.Name : "Anonyme")
@@ -164,15 +300,21 @@
                                         var statusClass = item.Status switch
                                         {
                                             StatusEnum.Approved => "bg-success bg-opacity-10 text-success",
-                                            // StatusEnum.Approved => "bg-secondary bg-opacity-10 text-secondary",
                                             StatusEnum.Pending => "bg-warning bg-opacity-10 text-warning",
                                             StatusEnum.Rejected => "bg-danger bg-opacity-10 text-danger",
                                             _ => "bg-light text-dark"
                                         };
+                                        var statusText = item.Status switch
+                                        {
+                                            StatusEnum.Approved => "Approuvé",
+                                            StatusEnum.Pending => "En attente",
+                                            StatusEnum.Rejected => "Rejeté",
+                                            _ => item.Status.ToString()
+                                        };
                                     }
-                                    <span class="status-badge @statusClass">@Html.DisplayFor(modelItem => item.Status)</span>
+                                    <span class="status-badge @statusClass">@statusText</span>
                                 </td>
-                                <td>
+                                <td data-order="@item.Rating">
                                     @if (item.Rating > 0)
                                     {
                                         <div class="rating-stars">
@@ -181,14 +323,14 @@
                                                 <i class="bi @(i <= item.Rating ? "bi-star-fill" : "bi-star")"></i>
                                             }
                                         </div>
-                                        <small class="text-muted">@Html.DisplayFor(modelItem => item.Evaluation)</small>
+                                        <small class="text-muted">@(item.Evaluation?.Length > 20 ? item.Evaluation.Substring(0, 20) + "..." : item.Evaluation)</small>
                                     }
                                     else
                                     {
                                         <span class="text-muted">Non évalué</span>
                                     }
                                 </td>
-                                <td>
+                                <td data-order="@item.SalaryAmount">
                                     @if (item.SalaryAmount > 0)
                                     {
                                         <span class="salary-badge">@Html.DisplayFor(modelItem => item.SalaryAmount) FCFA</span>
@@ -198,7 +340,7 @@
                                         <span class="badge bg-secondary">Non rémunéré</span>
                                     }
                                 </td>
-                                <td class="date-cell">
+                                <td data-order="@item.StartDate.ToString("yyyyMMdd")">
                                     <div>@item.StartDate.ToString("dd/MM/yy")</div>
                                     <div class="text-muted">au</div>
                                     <div>@item.EndDate.ToString("dd/MM/yy")</div>
@@ -208,62 +350,32 @@
                                         @Html.DisplayFor(modelItem => item.SignatureType)
                                     </span>
                                 </td>
-                                <td class="action-buttons">
-                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary btn-sm">
-                                        <i class="bi bi-pencil"></i>
-                                    </a>
-                                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-secondary btn-sm">
-                                        <i class="bi bi-eye"></i>
-                                    </a>
-                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm">
-                                        <i class="bi bi-trash"></i>
-                                    </a>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary btn-sm" title="Modifier">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-secondary btn-sm" title="Détails">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm" title="Supprimer">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </div>
                                 </td>
                             </tr>
                         }
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
 
-    <!-- Statistiques -->
-    <div class="row">
-        <div class="col-md-3 mb-4">
-            <div class="card border-0 shadow-sm h-100" style="border-left: 4px solid var(--primary-color);">
-                <div class="card-body">
-                    <h6 class="text-muted">Total Stages</h6>
-                    <h3 class="mb-0">@Model.Count()</h3>
+            <!-- Infos DataTables -->
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="dataTables_info" id="internships-table_info" role="status" aria-live="polite"></div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-4">
-            <div class="card border-0 shadow-sm h-100" style="border-left: 4px solid var(--accent-color);">
-                <div class="card-body">
-                    <h6 class="text-muted">Stages Actifs</h6>
-                    <h3 class="mb-0">@Model.Count(s => s.Status == StatusEnum.Pending)</h3>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-4">
-            <div class="card border-0 shadow-sm h-100" style="border-left: 4px solid var(--secondary-color);">
-                <div class="card-body">
-                    <h6 class="text-muted">Stages Terminés</h6>
-                    <h3 class="mb-0">@Model.Count(s => s.Status == StatusEnum.Approved)</h3>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-4">
-            <div class="card border-0 shadow-sm h-100" style="border-left: 4px solid #FFD700;">
-                <div class="card-body">
-                    <h6 class="text-muted">Note Moyenne</h6>
-                    <h3 class="mb-0">
-                        @{
-                            var ratedStages = Model.Where(s => s.Rating > 0);
-                            var averageRating = ratedStages.Any() ? ratedStages.Average(s => s.Rating) : 0;
-                        }
-                        @String.Format("{0:0.0}", averageRating)/5
-                    </h3>
+                <div class="col-md-6">
+                    <div class="dataTables_paginate paging_simple_numbers" id="internships-table_paginate"></div>
                 </div>
             </div>
         </div>
@@ -273,17 +385,117 @@
 <!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.bootstrap5.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap5.min.css">
+
+<!-- jQuery et DataTables JS -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/responsive.bootstrap5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+
 <script>
-    // Animation au survol des lignes
-    document.addEventListener('DOMContentLoaded', function() {
-        const rows = document.querySelectorAll('tbody tr');
-        rows.forEach(row => {
-            row.addEventListener('mouseenter', function() {
-                this.style.boxShadow = '0 5px 15px rgba(142, 68, 173, 0.1)';
-            });
-            row.addEventListener('mouseleave', function() {
-                this.style.boxShadow = 'none';
-            });
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialisation de DataTables
+        var table = $('#internships-table').DataTable({
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/fr-FR.json'
+            },
+            responsive: true,
+            pageLength: 10,
+            lengthMenu: [[10, 25, 50, 100], [10, 25, 50, 100]],
+            order: [[0, 'asc']], // Tri par nom par défaut
+            dom: '<"row"<"col-md-6"l><"col-md-6"f>>rt<"row"<"col-md-6"i><"col-md-6"p>>',
+            buttons: [
+                {
+                    extend: 'copy',
+                    text: '<i class="bi bi-clipboard me-1"></i>Copier',
+                    className: 'btn btn-sm btn-outline-secondary'
+                },
+                {
+                    extend: 'csv',
+                    text: '<i class="bi bi-file-earmark-spreadsheet me-1"></i>CSV',
+                    className: 'btn btn-sm btn-outline-secondary',
+                    title: 'Liste_Stages'
+                },
+                {
+                    extend: 'excel',
+                    text: '<i class="bi bi-file-excel me-1"></i>Excel',
+                    className: 'btn btn-sm btn-outline-secondary',
+                    title: 'Liste_Stages'
+                },
+                {
+                    extend: 'pdf',
+                    text: '<i class="bi bi-file-pdf me-1"></i>PDF',
+                    className: 'btn btn-sm btn-outline-secondary',
+                    title: 'Liste_Stages'
+                },
+                {
+                    extend: 'print',
+                    text: '<i class="bi bi-printer me-1"></i>Imprimer',
+                    className: 'btn btn-sm btn-outline-secondary'
+                }
+            ],
+            columnDefs: [
+                {
+                    targets: [8], // Colonne Actions
+                    orderable: false,
+                    searchable: false
+                },
+                {
+                    targets: '_all',
+                    className: 'align-middle'
+                }
+            ],
+            initComplete: function () {
+                // Personnalisation du champ de recherche
+                $('.dataTables_filter input').addClass('form-control form-control-sm');
+                $('.dataTables_length select').addClass('form-select form-select-sm');
+
+                // Ajouter les boutons d'export
+                var buttons = new $.fn.dataTable.Buttons(table, {
+                    buttons: [
+                        'copy', 'csv', 'excel', 'pdf', 'print'
+                    ]
+                }).container().appendTo($('#export-buttons'));
+            }
         });
+
+        // Gestionnaires d'événements pour les boutons d'export
+        $('#export-csv').on('click', function () {
+            table.button('.buttons-csv').trigger();
+        });
+
+        $('#export-excel').on('click', function () {
+            table.button('.buttons-excel').trigger();
+        });
+
+        $('#export-pdf').on('click', function () {
+            table.button('.buttons-pdf').trigger();
+        });
+
+        // Animation au survol des lignes
+        $('#internships-table tbody').on('mouseenter', 'tr', function () {
+            $(this).css('box-shadow', '0 5px 15px rgba(142, 68, 173, 0.1)');
+        });
+
+        $('#internships-table tbody').on('mouseleave', 'tr', function () {
+            $(this).css('box-shadow', 'none');
+        });
+
+        // Personnalisation des styles DataTables
+        $('.dataTables_wrapper').css('padding', '20px');
+        $('.dt-buttons').addClass('btn-group');
+        $('.dt-button').addClass('btn btn-sm');
     });
 </script>
