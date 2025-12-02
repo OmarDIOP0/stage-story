@@ -628,3 +628,4 @@ C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\StageStory.genruntimeconfig.cache
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\ref\StageStory.dll
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\compressed\r6foefunqc-{0}-00uigebo9k-00uigebo9k.gz
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\obj\Debug\net10.0\compressed\9k12r6dylz-{0}-xr52pscctr-xr52pscctr.gz

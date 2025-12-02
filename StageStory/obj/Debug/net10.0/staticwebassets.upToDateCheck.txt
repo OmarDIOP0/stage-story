@@ -36,6 +36,7 @@ C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\boot
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\css\bootstrap@5.3.8\bootstrap.min.css.map
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\css\bootstrap@5.3.8\bootstrap.min.css
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\css\stage.css
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
 C:\Users\bmd tech\OneDrive\Bureau\Project\StageStory\StageStory\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
@@ -154,6 +155,7 @@ wwwroot\css\bootstrap@5.3.8\bootstrap.rtl.min.css
 wwwroot\css\bootstrap@5.3.8\bootstrap.rtl.min.css.map
 wwwroot\css\index.css
 wwwroot\css\site.css
+wwwroot\css\stage.css
 wwwroot\favicon.ico
 wwwroot\images\mahila.png
 wwwroot\js\bootstrap@5.3.8\bootstrap.bundle.js

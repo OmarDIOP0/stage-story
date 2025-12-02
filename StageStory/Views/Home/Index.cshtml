@@ -1,4 +1,4 @@
-﻿@model StageStory.Models.Internship;
+﻿@model StageStory.Models.ViewModels.HomeViewModel
 @using StageStory.Models.Enum;
 
 <!DOCTYPE html>
@@ -7,11 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Story Stage - Évaluation de stages</title>
-    <!-- Bootstrap 5 CSS -->
-    @* <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> *@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="~/css/index.css" />
+
+    <!-- Chart.js pour les graphiques -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <!-- Hero section améliorée -->
@@ -69,7 +70,7 @@
                 <div class="col-lg-6 mb-5">
                     <h2 class="section-title">Ajouter un nouveau stage</h2>
                     <div class="card card-modern">
-                        <div class="card-header-modern">    
+                        <div class="card-header-modern">
                             <h3><i class="bi bi-plus-circle"></i>Nouveau stage</h3>
                         </div>
                         <div class="card-body p-4">
@@ -77,12 +78,12 @@
                                 @Html.AntiForgeryToken()
                                 <div class="mb-3">
                                     <label class="form-label fw-bold">Nom du stage</label>
-                                    <input asp-for="Name" type="text" class="form-control" placeholder="Ex: Développeur web front-end">
+                                    <input asp-for="NewInternship.Name" type="text" class="form-control" placeholder="Ex: Développeur web front-end">
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label fw-bold">Description</label>
-                                    <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                                    <textarea asp-for="NewInternship.Description" class="form-control" rows="3"></textarea>
                                 </div>
 
                                 <div class="mb-3">
@@ -95,8 +96,7 @@
                                         <span class="emoji-rating" data-rating="5">🤩</span>
                                     </div>
 
-                                    <!-- Doit avoir asp-for="Rating" -->
-                                    <input asp-for="Rating" type="hidden" id="rating" value="0">
+                                    <input asp-for="NewInternship.Rating" type="hidden" id="rating" value="0">
 
                                     <div class="text-center text-muted small" id="ratingText">
                                         Sélectionnez une note
@@ -105,37 +105,36 @@
 
                                 <div class="mb-3">
                                     <label class="form-label fw-bold">Commentaire d'évaluation</label>
-                                    <textarea asp-for="Evaluation" class="form-control" rows="3"></textarea>
+                                    <textarea asp-for="NewInternship.Evaluation" class="form-control" rows="3"></textarea>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="form-label fw-bold">Salaire (€)</label>
-                                    <input asp-for="SalaryAmount" type="number" class="form-control" placeholder="Montant mensuel">
+                                    <label class="form-label fw-bold">Salaire (FCFA)</label>
+                                    <input asp-for="NewInternship.SalaryAmount" type="number" class="form-control" placeholder="Montant mensuel">
                                 </div>
 
                                 <div class="row mb-3">
                                     <div class="col-md-6">
                                         <label class="form-label fw-bold">Date de début</label>
-                                        <input asp-for="StartDate" type="date" class="form-control">
+                                        <input asp-for="NewInternship.StartDate" type="date" class="form-control">
                                     </div>
                                     <div class="col-md-6">
                                         <label class="form-label fw-bold">Date de fin</label>
-                                        <input asp-for="EndDate" type="date" class="form-control">
+                                        <input asp-for="NewInternship.EndDate" type="date" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label fw-bold">Entreprise</label>
-                                    <select asp-for="EntrepriseId" class="form-select" asp-items="ViewBag.EntrepriseList">
-                                        <option>--Selectionnez une entreprise--</option>
+                                    <select asp-for="NewInternship.EntrepriseId" class="form-select" asp-items="ViewBag.EntrepriseList">
+                                        <option value="">--Selectionnez une entreprise--</option>
                                     </select>
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label fw-bold">Type de convention</label>
-                                    <select asp-for="SignatureType" class="form-select"
-                                            asp-items="Html.GetEnumSelectList<ConventionTypeEnum>()">
-                                                <option>-- Selectionnez un type de convention --</option>
+                                    <select asp-for="NewInternship.SignatureType" class="form-select" asp-items="Html.GetEnumSelectList<ConventionTypeEnum>()">
+                                        <option value="">-- Selectionnez un type de convention --</option>
                                     </select>
                                 </div>
 
@@ -145,7 +144,6 @@
                                     </button>
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>
@@ -158,19 +156,19 @@
                     <div class="row mb-4">
                         <div class="col-md-4 mb-3">
                             <div class="stats-card stats-1">
-                                <div class="stats-number">5</div>
+                                <div class="stats-number" id="total-stages">@Model.TotalInternships</div>
                                 <p class="mb-0">Stages évalués</p>
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="stats-card stats-2">
-                                <div class="stats-number">3</div>
+                                <div class="stats-number" id="approved-stages">@Model.ApprovedInternships</div>
                                 <p class="mb-0">Validés</p>
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="stats-card stats-3">
-                                <div class="stats-number">2</div>
+                                <div class="stats-number" id="pending-stages">@Model.PendingInternships</div>
                                 <p class="mb-0">En attente</p>
                             </div>
                         </div>
@@ -180,110 +178,91 @@
                     <div class="card card-modern mb-4">
                         <div class="card-header-modern">
                             <h3><i class="bi bi-list-check"></i>Mes stages récents</h3>
+                            @* <div class="ms-auto">
+                                <a href="/Internships" class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-grid"></i> Voir tout
+                                </a>
+                            </div> *@
                         </div>
                         <div class="card-body p-0">
-                            <div class="list-group list-group-flush">
-                                <!-- Stage 1 -->
-                                <div class="list-group-item stage-item">
-                                    <div class="stage-header">
-                                        <div>
-                                            <h5 class="stage-title">Développeur Full Stack</h5>
-                                            <p class="stage-company mb-1">TechCorp - Du 01/03/2023 au 30/08/2023</p>
+                            <div class="list-group list-group-flush" id="recent-internships">
+                                @if (Model.RecentInternships.Any())
+                                {
+                                    @foreach (var internship in Model.RecentInternships)
+                                    {
+                                        <div class="list-group-item stage-item">
+                                            <div class="stage-header">
+                                                <div>
+                                                    <h5 class="stage-title">@internship.Name</h5>
+                                                    <p class="stage-company mb-1">
+                                                        @internship.Enterprise?.Name -
+                                                        Du @internship.StartDate.ToString("dd/MM/yyyy") au @internship.EndDate.ToString("dd/MM/yyyy")
+                                                    </p>
+                                                </div>
+                                                @{
+                                                    var statusClass = internship.Status switch
+                                                    {
+                                                        StatusEnum.Approved => "bg-success",
+                                                        StatusEnum.Pending => "bg-warning text-dark",
+                                                        StatusEnum.Rejected => "bg-danger",
+                                                        _ => "bg-secondary"
+                                                    };
+                                                    var statusText = internship.Status switch
+                                                    {
+                                                        StatusEnum.Approved => "Validé",
+                                                        StatusEnum.Pending => "En attente",
+                                                        StatusEnum.Rejected => "Rejeté",
+                                                        _ => internship.Status.ToString()
+                                                    };
+                                                }
+                                                <span class="badge @statusClass">@statusText</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    @if (internship.Rating > 0)
+                                                    {
+                                                        <span class="stage-rating">
+                                                            @for (int i = 1; i <= 5; i++)
+                                                            {
+                                                                <i class="bi @(i <= internship.Rating ? "bi-star-fill" : "bi-star")"></i>
+                                                            }
+                                                        </span>
+                                                        <span class="ms-2">@internship.Rating/5</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="text-muted">Non évalué</span>
+                                                    }
+                                                </div>
+                                                <a href="/Internships/Edit/@internship.Id" class="btn btn-sm btn-outline-primary">Voir détails</a>
+                                            </div>
                                         </div>
-                                        <span class="badge bg-success">Validé</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="list-group-item text-center py-4">
+                                        <i class="bi bi-inbox display-4 text-muted mb-3"></i>
+                                        <p class="text-muted">Aucun stage enregistré</p>
+                                        <p class="small text-muted">Commencez par ajouter votre premier stage !</p>
                                     </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div>
-                                            <span class="stage-rating">
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-half"></i>
-                                            </span>
-                                            <span class="ms-2">4.5/5</span>
-                                        </div>
-                                        <button class="btn btn-sm btn-outline-primary">Voir détails</button>
-                                    </div>
-                                </div>
-
-                                <!-- Stage 2 -->
-                                <div class="list-group-item stage-item">
-                                    <div class="stage-header">
-                                        <div>
-                                            <h5 class="stage-title">Assistant Marketing Digital</h5>
-                                            <p class="stage-company mb-1">MarketPlus - Du 15/05/2023 au 15/11/2023</p>
-                                        </div>
-                                        <span class="badge bg-warning text-dark">En attente</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div>
-                                            <span class="stage-rating">
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star"></i>
-                                            </span>
-                                            <span class="ms-2">4/5</span>
-                                        </div>
-                                        <button class="btn btn-sm btn-outline-primary">Voir détails</button>
-                                    </div>
-                                </div>
-
-                                <!-- Stage 3 -->
-                                <div class="list-group-item stage-item">
-                                    <div class="stage-header">
-                                        <div>
-                                            <h5 class="stage-title">Analyste données</h5>
-                                            <p class="stage-company mb-1">DataSolutions - Du 10/01/2023 au 10/04/2023</p>
-                                        </div>
-                                        <span class="badge bg-success">Validé</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div>
-                                            <span class="stage-rating">
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star-fill"></i>
-                                                <i class="bi bi-star"></i>
-                                                <i class="bi bi-star"></i>
-                                            </span>
-                                            <span class="ms-2">3/5</span>
-                                        </div>
-                                        <button class="btn btn-sm btn-outline-primary">Voir détails</button>
-                                    </div>
-                                </div>
+                                }
                             </div>
                         </div>
                         <div class="card-footer text-center py-3">
-                            <a href="#" class="btn btn-outline-primary">Voir tous mes stages</a>
+                            <a href="/Internships" class="btn btn-outline-primary">
+                                <i class="bi bi-arrow-right me-2"></i>Voir tous mes stages
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Graphique simple -->
+                    <!-- Graphique dynamique -->
                     <div class="card card-modern">
                         <div class="card-header-modern">
                             <h3><i class="bi bi-graph-up"></i>Répartition de mes stages</h3>
                         </div>
                         <div class="card-body">
-                            <div class="chart-container">
-                                <div class="d-flex flex-column align-items-center">
-                                    <div class="chart-bar bg-primary mb-1" style="height: 100px;"></div>
-                                    <small>Validés</small>
-                                    <div class="fw-bold">3</div>
-                                </div>
-                                <div class="d-flex flex-column align-items-center">
-                                    <div class="chart-bar bg-warning mb-1" style="height: 70px;"></div>
-                                    <small>En attente</small>
-                                    <div class="fw-bold">2</div>
-                                </div>
-                                <div class="d-flex flex-column align-items-center">
-                                    <div class="chart-bar bg-danger mb-1" style="height: 30px;"></div>
-                                    <small>Refusés</small>
-                                    <div class="fw-bold">0</div>
-                                </div>
-                            </div>
+                            <canvas id="internshipChart" height="150"></canvas>
                         </div>
                     </div>
                 </div>
@@ -306,41 +285,40 @@
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h6>Navigation</h6>
                     <div class="footer-links">
-                        <a href="#">Accueil</a>
-                        <a href="#">Mes Stages</a>
-                        <a href="#">Statistiques</a>
-                        <a href="#">Mon Profil</a>
+                        <a href="/">Accueil</a>
+                        <a href="/Internship/List">Mes Stages</a>
+                        <a href="/Statistics">Statistiques</a>
+                        <a href="/Profile">Mon Profil</a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-4">
                     <h6>Légal</h6>
                     <div class="footer-links">
-                        <a href="#">Mentions légales</a>
-                        <a href="#">Confidentialité</a>
-                        <a href="#">CGU</a>
+                        <a href="/Legal/Privacy">Mentions légales</a>
+                        <a href="/Legal/Privacy">Confidentialité</a>
+                        <a href="/Legal/Terms">CGU</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <h6>Contact</h6>
                     <div class="footer-links">
-                        <a href="#"><i class="bi bi-envelope me-2"></i>contact@storystage.fr</a>
-                        <a href="#"><i class="bi bi-telephone me-2"></i>+771233252</a>
+                        <a href="mailto:contact@storystage.fr"><i class="bi bi-envelope me-2"></i>contact@storystage.fr</a>
+                        <a href="tel:+771233252"><i class="bi bi-telephone me-2"></i>+771233252</a>
                         <a href="#"><i class="bi bi-geo-alt me-2"></i>Dakar, Senegal</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom text-center">
-                <p class="mb-0">&copy; 2023 Story Stage. Tous droits réservés.</p>
+                <p class="mb-0">&copy; @DateTime.Now.Year Story Stage. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    @* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> *@
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-
             // Gestion des emojis
             document.querySelectorAll('.emoji-rating').forEach(emoji => {
                 emoji.addEventListener('click', function() {
@@ -362,48 +340,182 @@
                 });
             });
 
-            // Soumission Ajax
+            // Initialiser le graphique
+            const ctx = document.getElementById('internshipChart').getContext('2d');
+            const internshipChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Validés', 'En attente', 'Rejetés'],
+                    datasets: [{
+                        data: [
+                            @Model.ApprovedInternships,
+                            @Model.PendingInternships,
+                            @Model.RejectedInternships
+                        ],
+                        backgroundColor: [
+                            '#2ecc71',
+                            '#f39c12',
+                            '#e74c3c'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        }
+                    }
+                }
+            });
+
+            // Soumission Ajax améliorée
             var internshipForm = document.getElementById('internshipForm');
             internshipForm.addEventListener('submit', function(e) {
                 e.preventDefault();
 
-                var token = $('#internshipForm input[name="__RequestVerificationToken"]').val();
-
                 var formData = new FormData(internshipForm);
                 var payload = {
-                    Name: formData.get("Name"),
-                    Description: formData.get("Description"),
-                    Rating: parseInt(formData.get("Rating")),
-                    Evaluation: formData.get("Evaluation"),
-                    SalaryAmount: parseFloat(formData.get("SalaryAmount")),
-                    StartDate: formData.get("StartDate"),
-                    EndDate: formData.get("EndDate"),
-                    EntrepriseId: parseInt(formData.get("EntrepriseId")),
-                    SignatureType: formData.get("SignatureType")
+                    Name: formData.get("NewInternship.Name"),
+                    Description: formData.get("NewInternship.Description"),
+                    Rating: parseInt(formData.get("NewInternship.Rating")),
+                    Evaluation: formData.get("NewInternship.Evaluation"),
+                    SalaryAmount: parseFloat(formData.get("NewInternship.SalaryAmount")),
+                    StartDate: formData.get("NewInternship.StartDate"),
+                    EndDate: formData.get("NewInternship.EndDate"),
+                    EntrepriseId: parseInt(formData.get("NewInternship.EntrepriseId")),
+                    SignatureType: formData.get("NewInternship.SignatureType")
                 };
 
                 $.ajax({
                     type: "POST",
                     url: "/Home/Create",
-                    headers: { 'RequestVerificationToken': token },
+                    headers: {
+                        'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
+                    },
                     data: payload,
                     success: function(res) {
                         if(res.success) {
-                            alert(res.message);
+                            // Afficher notification
+                            showNotification('success', res.message);
+
+                            // Réinitialiser le formulaire
                             internshipForm.reset();
                             document.getElementById('ratingText').textContent = "Sélectionnez une note";
                             document.querySelectorAll('.emoji-rating').forEach(e => e.classList.remove('selected'));
+
+                            // Mettre à jour les statistiques
+                            updateStatistics(res.data);
+
+                            // Ajouter le nouveau stage à la liste
+                            addNewInternshipToList(res.data);
+
+                            // Mettre à jour le graphique
+                            updateChart(res.data);
                         } else {
-                            alert("Erreurs : " + res.errors.join(", "));
+                            showNotification('error', "Erreurs : " + res.errors.join(", "));
                         }
                     },
                     error: function(err) {
-                        alert("Une erreur est survenue lors de la soumission du formulaire.");
+                        showNotification('error', "Une erreur est survenue lors de la soumission du formulaire.");
                         console.log(err);
                     }
                 });
-
             });
+
+            function showNotification(type, message) {
+                // Créer une notification (vous pouvez utiliser Toastr ou une bibliothèque similaire)
+                var alertClass = type === 'success' ? 'alert-success' : 'alert-danger';
+                var notification = $('<div class="alert ' + alertClass + ' alert-dismissible fade show" role="alert">' +
+                                    message +
+                                    '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' +
+                                    '</div>');
+
+                $('.container').prepend(notification);
+                setTimeout(function() {
+                    notification.alert('close');
+                }, 5000);
+            }
+
+            function updateStatistics(newInternship) {
+                // Mettre à jour les compteurs
+                $('#total-stages').text(parseInt($('#total-stages').text()) + 1);
+
+                if (newInternship.status === 'Approved') {
+                    $('#approved-stages').text(parseInt($('#approved-stages').text()) + 1);
+                } else if (newInternship.status === 'Pending') {
+                    $('#pending-stages').text(parseInt($('#pending-stages').text()) + 1);
+                }
+            }
+
+            function addNewInternshipToList(internship) {
+                // Créer l'élément HTML pour le nouveau stage
+                var newItem = createInternshipItem(internship);
+
+                // Ajouter au début de la liste
+                $('#recent-internships').prepend(newItem);
+
+                // Limiter à 3 éléments
+                if ($('#recent-internships .stage-item').length > 3) {
+                    $('#recent-internships .stage-item').last().remove();
+                }
+            }
+
+            function createInternshipItem(internship) {
+                // Créer dynamiquement un élément de stage
+                var statusClass = internship.status === 'Approved' ? 'bg-success' :
+                                internship.status === 'Pending' ? 'bg-warning text-dark' : 'bg-secondary';
+                var statusText = internship.status === 'Approved' ? 'Validé' :
+                               internship.status === 'Pending' ? 'En attente' : internship.status;
+
+                var stars = '';
+                if (internship.rating > 0) {
+                    for (var i = 1; i <= 5; i++) {
+                        stars += '<i class="bi ' + (i <= internship.rating ? 'bi-star-fill' : 'bi-star') + '"></i>';
+                    }
+                }
+
+                return '<div class="list-group-item stage-item">' +
+                       '<div class="stage-header">' +
+                       '<div>' +
+                       '<h5 class="stage-title">' + internship.name + '</h5>' +
+                       '<p class="stage-company mb-1">' + internship.enterpriseName + ' - Du ' +
+                       formatDate(internship.startDate) + ' au ' + formatDate(internship.endDate) + '</p>' +
+                       '</div>' +
+                       '<span class="badge ' + statusClass + '">' + statusText + '</span>' +
+                       '</div>' +
+                       '<div class="d-flex justify-content-between align-items-center">' +
+                       '<div>' +
+                       (internship.rating > 0 ?
+                        '<span class="stage-rating">' + stars + '</span>' +
+                        '<span class="ms-2">' + internship.rating + '/5</span>' :
+                        '<span class="text-muted">Non évalué</span>') +
+                       '</div>' +
+                       '<a href="/Internship/Details/' + internship.id + '" class="btn btn-sm btn-outline-primary">Voir détails</a>' +
+                       '</div>' +
+                       '</div>';
+            }
+
+            function updateChart(newInternship) {
+                // Mettre à jour les données du graphique
+                var chartData = internshipChart.data.datasets[0].data;
+
+                if (newInternship.status === 'Approved') {
+                    chartData[0] += 1;
+                } else if (newInternship.status === 'Pending') {
+                    chartData[1] += 1;
+                } else if (newInternship.status === 'Rejected') {
+                    chartData[2] += 1;
+                }
+
+                internshipChart.update();
+            }
+
+            function formatDate(dateString) {
+                var date = new Date(dateString);
+                return date.toLocaleDateString('fr-FR');
+            }
         });
     </script>
 

@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using StageStory.Data;
 using StageStory.Models;
+using StageStory.Models.ViewModels;
 using System.Diagnostics;
 
 namespace StageStory.Controllers;
@@ -15,10 +16,24 @@ public class HomeController : Controller
     {
         _context = context;
     }   
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
+        var internships = await _context.Internships
+        .Include(i => i.Enterprise)
+        .Include(i => i.Student)
+        .OrderByDescending(i => i.CreatedDate)
+        .ToListAsync();
+
+        var viewModel = new HomeViewModel
+        {
+            NewInternship = new Internship(),
+            RecentInternships = internships.Take(3).ToList(),
+            AllInternships = internships
+        };
+
         ViewBag.EntrepriseList = new SelectList(_context.Enterprises, "Id", "Name");
-        return View();
+
+        return View(viewModel);
     }
     [HttpPost]
     [ValidateAntiForgeryToken]
