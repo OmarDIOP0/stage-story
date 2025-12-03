@@ -19,14 +19,12 @@ namespace StageStory.Controllers
             _context = context;
         }
 
-        // GET: Internships
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Internships.Include(i => i.Enterprise).Include(i => i.Student);
             return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: Internships/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -46,7 +44,6 @@ namespace StageStory.Controllers
             return View(internship);
         }
 
-        // GET: Internships/Create
         public IActionResult Create()
         {
             ViewData["Id"] = new SelectList(_context.Enterprises, "Id", "Id");
