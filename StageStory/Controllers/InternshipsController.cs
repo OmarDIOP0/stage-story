@@ -88,7 +88,6 @@ namespace StageStory.Controllers
             return View(internship);
         }
 
-        // GET: Internships/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
